@@ -37,6 +37,7 @@ schools.forEach(school => {
   school.x = CENTER.x + Math.cos(angle) * school.circle * RADIUS_STEP;
   school.y = CENTER.y + Math.sin(angle) * school.circle * RADIUS_STEP;
   school.angle = angle; // Stocker l’angle pour les écoles transcendantales
+  console.log(`Position initiale de ${school.name} : (${school.x.toFixed(2)}, ${school.y.toFixed(2)}) angle: ${angle.toFixed(2)} rad`);
 });
 
 // Ajuster la position des écoles transcendantales
@@ -94,6 +95,7 @@ schools.forEach(school => {
     school.x = CENTER.x + Math.cos(parent.angle) * school.circle * RADIUS_STEP;
     school.y = CENTER.y + Math.cos(parent.angle) * school.circle * RADIUS_STEP;
     school.angle = school.angle; // Stocker l’angle pour les écoles transcendantales
+    console.log(`Position finale de ${school.name} : (${school.x.toFixed(2)}, ${school.y.toFixed(2)}) angle: ${school.angle.toFixed(2)} rad`);
   }
 });
 
