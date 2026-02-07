@@ -41,9 +41,15 @@ body {
   transition: transform 0.2s;
 }
 
-.school-node:hover {
-  transform: scale(1.1);
+.school-node circle {
+  transition: r 0.2s, fill 0.2s;
 }
+
+.school-node:hover circle {
+  r: 26;
+  fill: #5fa8d3;
+}
+
 
 .school-label {
   font-size: 12px;
