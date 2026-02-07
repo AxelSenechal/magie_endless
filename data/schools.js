@@ -1,13 +1,15 @@
 const schools = [
+  /* =========================
+     1er CERCLE – PRIMORDIALES
+     ========================= */
+
   {
     id: "transmutation",
     name: "Transmutation",
     circle: 1,
     type: "primordiale",
     parents: [],
-    description: "Manipulation de la forme, structure et état des éléments non vivants.",
-    bonus: "Matérialiste",
-    talents: ["Connaissance : Géologie"]
+    description: "Manipulation de la forme, de la structure et de l’état des éléments non vivants (roches, terres, métaux, liquides, gaz)."
   },
   {
     id: "esoterisme",
@@ -15,9 +17,7 @@ const schools = [
     circle: 1,
     type: "primordiale",
     parents: [],
-    description: "Manipulation du mana.",
-    bonus: "Évaluation magique",
-    talents: ["Vision magique"]
+    description: "Manipulation du mana : déplacement, blocage, analyse et interactions magiques."
   },
   {
     id: "psychomancie",
@@ -25,19 +25,20 @@ const schools = [
     circle: 1,
     type: "primordiale",
     parents: [],
-    description: "Manipulation de l’esprit et de la pensée.",
-    bonus: "Multifocus",
-    talents: ["Vision psychique"]
+    description: "Manipulation de son propre esprit et de la pensée ambiante."
   },
+
+  /* =========================
+     2e CERCLE – SUBLIMATIONS
+     ========================= */
+
   {
-    id: "vegetomancie",
-    name: "Végémancie",
+    id: "psychurgie",
+    name: "Psychurgie",
     circle: 2,
     type: "sublimation",
-    parents: ["transmutation"],
-    description: "Contrôle de la vie végétale.",
-    bonus: "Main Verte",
-    talents: ["Herboristerie"]
+    parents: ["psychomancie"],
+    description: "Modelage de la matière psychique : isolation, modification ou destruction de pensées et de souvenirs."
   },
   {
     id: "evocation",
@@ -45,29 +46,64 @@ const schools = [
     circle: 2,
     type: "sublimation",
     parents: ["esoterisme"],
-    description: "Manifestation physique du mana.",
-    bonus: "Surpuissance",
-    talents: ["Contact Mana"]
+    description: "Manifestation physique du mana sous une forme quasi matérielle."
   },
+  {
+    id: "vegetomancie",
+    name: "Végémancie",
+    circle: 2,
+    type: "sublimation",
+    parents: ["transmutation"],
+    description: "Contrôle de la vie végétale : modification, croissance et développement."
+  },
+  {
+    id: "creation_transmutation",
+    name: "Création (Transmutation)",
+    circle: 2,
+    type: "sublimation",
+    parents: ["transmutation"],
+    description: "Permet de créer de la matière correspondant à la magie mère."
+  },
+
+  /* ===============================
+     2e CERCLE – TRANSCENDANTALES
+     =============================== */
+
   {
     id: "projection",
     name: "Projection",
     circle: 2,
     type: "transcendantale",
     parents: ["psychomancie", "esoterisme"],
-    description: "Implémentation de psyché dans le mana.",
-    bonus: "Télé-chargement",
-    talents: ["Perception magique"]
+    description: "Implémentation de psyché dans du mana : sens à distance, sauvegarde de pensées, sorts guidés."
   },
-
-    {
+  {
     id: "enchantement",
     name: "Enchantement",
     circle: 2,
     type: "transcendantale",
     parents: ["transmutation", "esoterisme"],
-    description: "Implémentation d'un comportement manascien dans la matière.",
-    bonus: "Télé-chargement",
-    talents: ["Perception magique"]
+    description: "Implémentation d’un comportement arcanique dans un matériau."
+  },
+  {
+    id: "psychometrie",
+    name: "Psychométrie",
+    circle: 2,
+    type: "transcendantale",
+    parents: ["transmutation", "psychomancie"],
+    description: "Lecture, modification ou implémentation d’empreintes psychiques dans la matière."
+  },
+
+  /* =========================
+     3e CERCLE – SUBLIMATION
+     ========================= */
+
+  {
+    id: "psychophorie",
+    name: "Psychophorie",
+    circle: 3,
+    type: "sublimation",
+    parents: ["psychurgie"],
+    description: "Création de pseudo-esprits et application de ceux-ci sur des cibles."
   }
 ];
