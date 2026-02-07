@@ -38,6 +38,31 @@ schools.forEach(school => {
   school.y = CENTER.y + Math.sin(angle) * school.circle * RADIUS_STEP;
 });
 
+schools.forEach(school => {
+  if (
+    school.type === "transcendantale" &&
+    school.parents.length >= 2
+  ) {
+    let sumX = 0;
+    let sumY = 0;
+
+    school.parents.forEach(parentId => {
+      const parent = schoolMap[parentId];
+      if (!parent) return;
+
+      sumX += Math.cos(parent.angle);
+      sumY += Math.sin(parent.angle);
+    });
+
+    const avgAngle = Math.atan2(sumY, sumX);
+
+    school.angle = avgAngle;
+    school.x = CENTER.x + Math.cos(avgAngle) * school.circle * RADIUS_STEP;
+    school.y = CENTER.y + Math.sin(avgAngle) * school.circle * RADIUS_STEP;
+  }
+});
+
+
 // Dessiner les liens
 schools.forEach(school => {
   school.parents.forEach(parentId => {
