@@ -59,4 +59,15 @@ const schools = [
     bonus: "Télé-chargement",
     talents: ["Perception magique"]
   }
+
+    {
+    id: "enchantement",
+    name: "Enchantement",
+    circle: 2,
+    type: "transcendantale",
+    parents: ["transmutation", "esoterisme"],
+    description: "Implémentation d'un comportement manascien dans la matière.",
+    bonus: "",
+    talents: [""]
+  }
 ];
