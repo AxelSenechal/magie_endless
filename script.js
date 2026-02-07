@@ -46,6 +46,8 @@ schools.forEach(school => {
     let sumX = 0;
     let sumY = 0;
     let count = 0;
+    console.log(`Calcul de l'angle pour ${school.name} (parents: ${school.parents.join(", ")})`);
+    console.log(`Parents: ${school.parents.map(id => schoolMap[id] ? schoolMap[id].name : id).join(", ")}`);
 
     school.parents.forEach(parentId => {
       const parent = schoolMap[parentId];
