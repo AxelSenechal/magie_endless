@@ -36,7 +36,7 @@ schools.forEach(school => {
 
   school.x = CENTER.x + Math.cos(angle) * school.circle * RADIUS_STEP;
   school.y = CENTER.y + Math.sin(angle) * school.circle * RADIUS_STEP;
-  console.log(`Position initiale de ${school.name} : (${school.x.toFixed(2)}, ${school.y.toFixed(2)})`);
+  school.angle = angle; // Stocker l’angle pour les écoles transcendantales
 });
 
 schools.forEach(school => {
