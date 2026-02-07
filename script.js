@@ -81,17 +81,16 @@ schools.forEach(school => {
 
 // Ajuster la position des écoles sublimées
 schools.forEach(school => {
-  if (
-    school.type === "sublimation"
-  ) {
 
-
+      let sumX = 0;
+    let sumY = 0;
+  
     // Position finale (quoi qu’il arrive)
-    school.x = CENTER.x + Math.cos(school.parents[0].angle) * school.circle * RADIUS_STEP;
-    school.y = CENTER.y + Math.sin(school.angle) * school.circle * RADIUS_STEP;
+    school.x = CENTER.x + Math.cos(parent.angle) * school.circle * RADIUS_STEP;
+    school.y = CENTER.y + Math.cos(parent.angle) * school.circle * RADIUS_STEP;
     school.angle = school.angle; // Stocker l’angle pour les écoles transcendantales
-  }
-});
+  });
+
 
 
 // Dessiner les liens
