@@ -43,12 +43,10 @@ schools.forEach(school => {
 // Ajuster la position des écoles transcendantales et sublimées
 schools.forEach(school => {
   if (
-    (school.type === "transcendantale" || school.type === "sublimation") &&
-    school.parents.length >= 2
+    (school.type === "transcendantale" || school.type === "sublimation")
   ) {
     let sumX = 0;
     let sumY = 0;
-    let count = 0;
 
 
     school.parents.forEach(parentId => {
@@ -56,7 +54,6 @@ schools.forEach(school => {
       if (parent && typeof parent.angle === "number") {
         sumX += Math.cos(parent.angle);
         sumY += Math.sin(parent.angle);
-        count++;
       }
     });
 
