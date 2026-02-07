@@ -82,14 +82,19 @@ schools.forEach(school => {
 // Ajuster la position des écoles sublimées
 schools.forEach(school => {
 
-      let sumX = 0;
-    let sumY = 0;
+
+  if (school.type === "sublimation" &&
+    school.parents.length === 1
+  ) {
+    const parent = schoolMap[school.parents[0]];
+    console.log(`ParentID: ${school.parents[0]}, Parent: ${parent ? parent.name : "Non trouvé"} angle: ${parent ? parent.angle : "N/A"}`);
   
     // Position finale (quoi qu’il arrive)
     school.x = CENTER.x + Math.cos(parent.angle) * school.circle * RADIUS_STEP;
     school.y = CENTER.y + Math.cos(parent.angle) * school.circle * RADIUS_STEP;
     school.angle = school.angle; // Stocker l’angle pour les écoles transcendantales
-  });
+  }
+});
 
 
 
