@@ -51,8 +51,7 @@ schools.forEach(school => {
 
     school.parents.forEach(parentId => {
       const parent = schoolMap[parentId];
-              console.log(`Parent ${parent.name} id ${parent.id} angle: ${parent.angle.toFixed(2)} rad description: ${parent.description}`);
-
+      console.log(`ParentID: ${parentId}, Parent: ${parent ? parent.name : "Non trouvé"}`);
       if (parent && typeof parent.angle === "number") {
         sumX += Math.cos(parent.angle);
         sumY += Math.sin(parent.angle);
