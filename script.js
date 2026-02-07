@@ -47,20 +47,12 @@ schools.forEach(school => {
     let sumX = 0;
     let sumY = 0;
     let count = 0;
-    console.log(`Calcul de l'angle pour ${school.name} (parents: ${school.parents.join(", ")})`);
-    console.log(`Parents: ${school.parents.map(id => schoolMap[id] ? schoolMap[id].name : id).join(", ")}`);
-    console.log(`Positions des parents: ${school.parents.map(id => {
-      const parent = schoolMap[id];
-      if (parent) {
-        return `${parent.name} (angle: ${parent.angle !== undefined ? parent.angle.toFixed(2) : "N/A"})`;
-      } else {
-        return `${id} (non trouvé)`;
-      }
-    }).join("; ")}`);
+
 
     school.parents.forEach(parentId => {
       const parent = schoolMap[parentId];
       if (parent && typeof parent.angle === "number") {
+        console.log(`Parent ${parent.name} id ${parent.id} angle: ${parent.angle.toFixed(2)} rad description: ${parent.description}`);
         sumX += Math.cos(parent.angle);
         sumY += Math.sin(parent.angle);
         count++;
