@@ -58,7 +58,7 @@ const schools = [
     description: "Implémentation de psyché dans le mana.",
     bonus: "Télé-chargement",
     talents: ["Perception magique"]
-  }
+  },
 
     {
     id: "enchantement",
