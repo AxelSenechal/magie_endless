@@ -45,22 +45,33 @@ schools.forEach(school => {
   ) {
     let sumX = 0;
     let sumY = 0;
+    let count = 0;
 
     school.parents.forEach(parentId => {
       const parent = schoolMap[parentId];
-      if (!parent) return;
-
-      sumX += Math.cos(parent.angle);
-      sumY += Math.sin(parent.angle);
+      if (parent && typeof parent.angle === "number") {
+        sumX += Math.cos(parent.angle);
+        sumY += Math.sin(parent.angle);
+        count++;
+      }
     });
 
-    const avgAngle = Math.atan2(sumY, sumX);
+    // Sécurité : il faut au moins 2 parents valides
+    if (count >= 2) {
+      // Si les vecteurs ne s'annulent pas
+      if (Math.abs(sumX) > 0.0001 || Math.abs(sumY) > 0.0001) {
+        const avgAngle = Math.atan2(sumY, sumX);
+        school.angle = avgAngle;
+      }
+      // sinon → on garde l’angle initial
+    }
 
-    school.angle = avgAngle;
-    school.x = CENTER.x + Math.cos(avgAngle) * school.circle * RADIUS_STEP;
-    school.y = CENTER.y + Math.sin(avgAngle) * school.circle * RADIUS_STEP;
+    // Position finale (quoi qu’il arrive)
+    school.x = CENTER.x + Math.cos(school.angle) * school.circle * RADIUS_STEP;
+    school.y = CENTER.y + Math.sin(school.angle) * school.circle * RADIUS_STEP;
   }
 });
+
 
 
 // Dessiner les liens
