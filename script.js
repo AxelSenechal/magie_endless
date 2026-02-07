@@ -48,6 +48,14 @@ schools.forEach(school => {
     let count = 0;
     console.log(`Calcul de l'angle pour ${school.name} (parents: ${school.parents.join(", ")})`);
     console.log(`Parents: ${school.parents.map(id => schoolMap[id] ? schoolMap[id].name : id).join(", ")}`);
+    console.log(`Positions des parents: ${school.parents.map(id => {
+      const parent = schoolMap[id];
+      if (parent) {
+        return `${parent.name} (angle: ${parent.angle !== undefined ? parent.angle.toFixed(2) : "N/A"})`;
+      } else {
+        return `${id} (non trouvé)`;
+      }
+    }).join("; ")}`);
 
     school.parents.forEach(parentId => {
       const parent = schoolMap[parentId];
