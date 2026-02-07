@@ -1,4 +1,5 @@
 const svg = document.getElementById("magic-map");
+const viewport = document.getElementById("viewport");
 const infoPanel = document.getElementById("info-panel");
 
 const CENTER = { x: 0, y: 0 };
@@ -25,7 +26,7 @@ Object.keys(circles).forEach(circle => {
   c.setAttribute("fill", "none");
   c.setAttribute("stroke", "#d7d6e2");
   c.setAttribute("stroke-dasharray", "4 4");
-  svg.appendChild(c);
+  viewport.appendChild(c);
 });
 
 // Calculer les positions
@@ -86,7 +87,7 @@ schools.forEach(school => {
     line.setAttribute("x2", school.x);
     line.setAttribute("y2", school.y);
     line.setAttribute("class", `link ${school.type}`);
-    svg.appendChild(line);
+    viewport.appendChild(line);
   });
 });
 
@@ -110,7 +111,7 @@ schools.forEach(school => {
 
   g.addEventListener("click", () => showInfo(school));
 
-  svg.appendChild(g);
+  viewport.appendChild(g);
 });
 
 function showInfo(school) {
@@ -127,3 +128,60 @@ function showInfo(school) {
     </ul>
   `;
 }
+
+let scale = 1;
+let translateX = 0;
+let translateY = 0;
+
+let isPanning = false;
+let startX = 0;
+let startY = 0;
+
+function updateTransform() {
+  viewport.setAttribute(
+    "transform",
+    `translate(${translateX}, ${translateY}) scale(${scale})`
+  );
+}
+
+/* ===== ZOOM À LA MOLETTE ===== */
+svg.addEventListener("wheel", event => {
+  event.preventDefault();
+
+  const zoomFactor = 0.1;
+  const direction = event.deltaY > 0 ? -1 : 1;
+
+  const newScale = scale + direction * zoomFactor;
+
+  // Limites
+  if (newScale < 0.3 || newScale > 3) return;
+
+  scale = newScale;
+  updateTransform();
+}, { passive: false });
+
+/* ===== DÉPLACEMENT (PAN) ===== */
+svg.addEventListener("mousedown", event => {
+  isPanning = true;
+  startX = event.clientX;
+  startY = event.clientY;
+});
+
+svg.addEventListener("mousemove", event => {
+  if (!isPanning) return;
+
+  const dx = event.clientX - startX;
+  const dy = event.clientY - startY;
+
+  startX = event.clientX;
+  startY = event.clientY;
+
+  translateX += dx;
+  translateY += dy;
+
+  updateTransform();
+});
+
+svg.addEventListener("mouseup", () => isPanning = false);
+svg.addEventListener("mouseleave", () => isPanning = false);
+
