@@ -67,7 +67,7 @@ const schools = [
     type: "transcendantale",
     parents: ["transmutation", "esoterisme"],
     description: "Implémentation d'un comportement manascien dans la matière.",
-    bonus: "",
-    talents: [""]
+    bonus: "Télé-chargement",
+    talents: ["Perception magique"]
   }
 ];
