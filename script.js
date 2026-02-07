@@ -40,10 +40,10 @@ schools.forEach(school => {
   console.log(`Position initiale de ${school.name} : (${school.x.toFixed(2)}, ${school.y.toFixed(2)}) angle: ${angle.toFixed(2)} rad`);
 });
 
-// Ajuster la position des écoles transcendantales
+// Ajuster la position des écoles transcendantales et sublimées
 schools.forEach(school => {
   if (
-    school.type === "transcendantale" &&
+    (school.type === "transcendantale" || school.type === "sublimation") &&
     school.parents.length >= 2
   ) {
     let sumX = 0;
@@ -60,15 +60,10 @@ schools.forEach(school => {
       }
     });
 
-    // Sécurité : il faut au moins 2 parents valides
-    if (count >= 2) {
-      // Si les vecteurs ne s'annulent pas
-      if (Math.abs(sumX) > 0.0001 || Math.abs(sumY) > 0.0001) {
+
         const avgAngle = Math.atan2(sumY, sumX);
         school.angle = avgAngle;
-      }
-      // sinon → on garde l’angle initial
-    }
+     
 
     
 
@@ -79,25 +74,6 @@ schools.forEach(school => {
   }
 });
 
-// Ajuster la position des écoles sublimées
-schools.forEach(school => {
-
-  console.log(`Traitement de ${school.name} (type: ${school.type})`);
-
-  if (school.type === "sublimation"
-
-  ) {
-    const parent = schoolMap[school.parents[0]];
-    console.log(`ParentID: ${school.parents[0]}, Parent: ${parent ? parent.name : "Non trouvé"} angle: ${parent ? parent.angle : "N/A"}`);
-
-
-    // Position finale (quoi qu’il arrive)
-    school.x = CENTER.x + Math.cos(parent.angle) * school.circle * RADIUS_STEP;
-    school.y = CENTER.y + Math.cos(parent.angle) * school.circle * RADIUS_STEP;
-    school.angle = school.angle; // Stocker l’angle pour les écoles transcendantales
-    console.log(`Position finale de ${school.name} : (${school.x.toFixed(2)}, ${school.y.toFixed(2)}) angle: ${school.angle.toFixed(2)} rad`);
-  }
-});
 
 
 
