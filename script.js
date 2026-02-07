@@ -39,6 +39,7 @@ schools.forEach(school => {
   school.angle = angle; // Stocker l’angle pour les écoles transcendantales
 });
 
+// Ajuster la position des écoles transcendantales
 schools.forEach(school => {
   if (
     school.type === "transcendantale" &&
@@ -69,12 +70,28 @@ schools.forEach(school => {
       // sinon → on garde l’angle initial
     }
 
+    
+
     // Position finale (quoi qu’il arrive)
     school.x = CENTER.x + Math.cos(school.angle) * school.circle * RADIUS_STEP;
     school.y = CENTER.y + Math.sin(school.angle) * school.circle * RADIUS_STEP;
+    school.angle = school.angle; // Stocker l’angle pour les écoles transcendantales
   }
 });
 
+// Ajuster la position des écoles sublimées
+schools.forEach(school => {
+  if (
+    school.type === "sublimation"
+  ) {
+
+
+    // Position finale (quoi qu’il arrive)
+    school.x = CENTER.x + Math.cos(school.parents[0].angle) * school.circle * RADIUS_STEP;
+    school.y = CENTER.y + Math.sin(school.angle) * school.circle * RADIUS_STEP;
+    school.angle = school.angle; // Stocker l’angle pour les écoles transcendantales
+  }
+});
 
 
 // Dessiner les liens
