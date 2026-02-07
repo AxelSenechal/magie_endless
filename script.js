@@ -23,7 +23,7 @@ Object.keys(circles).forEach(circle => {
   c.setAttribute("cy", CENTER.y);
   c.setAttribute("r", r);
   c.setAttribute("fill", "none");
-  c.setAttribute("stroke", "#222");
+  c.setAttribute("stroke", "#d7d6e2");
   c.setAttribute("stroke-dasharray", "4 4");
   svg.appendChild(c);
 });
