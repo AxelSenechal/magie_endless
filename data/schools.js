@@ -100,12 +100,12 @@ const schools = [
     description: "Création de pseudo-esprits et application de ceux-ci sur des cibles."
   },
   {
-    id: "Test_transcendantale_3",
-    name: "Test transcendantale 3",
+    id: "Test_transcendantale_1_2",
+    name: "Test transcendantale 1 2",
     circle: 3,
     type: "transcendantale",
-    parents: ["transmutation", "psychomancie", "esoterisme"],
-    description: "Test de transcendantale 3 : nécessite trois écoles du premier cercle."
+    parents: ["transmutation", "psychurgie"],
+    description: "Test de transcendantale 1 2."
   }
 
 ];
