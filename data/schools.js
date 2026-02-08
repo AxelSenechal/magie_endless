@@ -188,7 +188,14 @@ const schools = [
     parents: ["nexomancie"],
     description: "Renforcement et alignement forcé des connexions existantes."
   },
-
+{
+    id: "vitamancie",
+    name: "Vitamancie",
+    circle: 4,
+    type: "transcendantale",
+    parents: ["vivimancie", "esoterisme"],
+    description: "Manipulation directe de l’essence vitale pour guérir ou renforcer la vie."
+  },
   /* =========================
      5e CERCLE
      ========================= */
@@ -241,13 +248,14 @@ const schools = [
     parents: ["unknown_4_a"],
     description: "Altération des événements par manipulation indirecte des liens."
   },
-  {id: "animancie",
-    name: "Animancie",
+  {id: "necromancie",
+    name: "Nécromancie",
     circle: 5,
     type: "transcendantale",
-    parents: ["psychophorie", "esoterisme", "cadaveromancie"],
-    description: "Maîtrise complète de la vie et de la mort."
+    parents: ["cadaveromancie", "vitamancie"],
+    description: "Manipulation de l'énergie de la mort et de l’au-delà."
   },
+  
 
   /* =========================
      6e CERCLE
@@ -300,5 +308,12 @@ const schools = [
     type: "sublimation",
     parents: ["unknown_5_b"],
     description: "Manipulation directe du temps et de sa progression."
+  },
+    {id: "animancie",
+    name: "Animancie",
+    circle: 6,
+    type: "sublimation",
+    parents: ["necromancie"],
+    description: "Maîtrise de l'âme."
   }
 ];
