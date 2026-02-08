@@ -83,6 +83,37 @@ schools.forEach(school => {
   }
 });
 
+function offsetOverlappingSchools(schoolsToAdjust, angleStepDeg) {
+  const angleStepRad = (Math.PI / 180) * angleStepDeg;
+  const positionBuckets = new Map();
+
+  schoolsToAdjust.forEach(school => {
+    const key = `${school.x.toFixed(4)},${school.y.toFixed(4)}`;
+    if (!positionBuckets.has(key)) positionBuckets.set(key, []);
+    positionBuckets.get(key).push(school);
+  });
+
+  positionBuckets.forEach(group => {
+    if (group.length <= 1) return;
+
+    const baseAngle = typeof group[0].angle === "number"
+      ? group[0].angle
+      : Math.atan2(group[0].y - CENTER.y, group[0].x - CENTER.x);
+
+    const startAngle = baseAngle - (angleStepRad * (group.length - 1)) / 2;
+
+    group.forEach((school, index) => {
+      const angle = startAngle + angleStepRad * index;
+      school.angle = angle;
+      school.x = CENTER.x + Math.cos(angle) * school.circle * RADIUS_STEP;
+      school.y = CENTER.y + Math.sin(angle) * school.circle * RADIUS_STEP;
+    });
+  });
+}
+
+offsetOverlappingSchools(schools, 10);
+
+
 
 
 
