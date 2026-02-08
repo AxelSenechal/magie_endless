@@ -98,5 +98,14 @@ const schools = [
     type: "sublimation",
     parents: ["psychurgie"],
     description: "Création de pseudo-esprits et application de ceux-ci sur des cibles."
+  },
+  {
+    id: "Test_transcendantale_3",
+    name: "Test transcendantale 3",
+    circle: 3,
+    type: "transcendantale",
+    parents: ["transmutation", "psychomancie", "esoterisme"],
+    description: "Test de transcendantale 3 : nécessite trois écoles du premier cercle."
   }
+
 ];
