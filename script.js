@@ -5,7 +5,7 @@ const infoPanel = document.getElementById("info-panel");
 const CENTER = { x: 0, y: 0 };
 const RADIUS_STEP = 120;
 const NODE_RADIUS = 22;
-const CENTER_LOGO_SIZE = 16;
+const CENTER_LOGO_SIZE = 160;
 
 const schoolMap = {};
 schools.forEach(s => schoolMap[s.id] = s);
