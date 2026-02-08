@@ -56,14 +56,7 @@ const schools = [
     parents: ["transmutation"],
     description: "Contrôle et modification de la vie végétale."
   },
-  {
-    id: "creation_transmutation",
-    name: "Création (Transmutation)",
-    circle: 2,
-    type: "sublimation",
-    parents: ["transmutation"],
-    description: "Création directe de matière issue de la magie mère."
-  },
+
 
   /* ===============================
      2e CERCLE – TRANSCENDANTALES
