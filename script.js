@@ -5,6 +5,7 @@ const infoPanel = document.getElementById("info-panel");
 const CENTER = { x: 0, y: 0 };
 const RADIUS_STEP = 120;
 const NODE_RADIUS = 22;
+const CENTER_LOGO_SIZE = 16;
 
 const schoolMap = {};
 schools.forEach(s => schoolMap[s.id] = s);
@@ -28,6 +29,16 @@ Object.keys(circles).forEach(circle => {
   c.setAttribute("stroke-dasharray", "4 4");
   viewport.appendChild(c);
 });
+
+// Logo central
+const centerLogo = document.createElementNS("http://www.w3.org/2000/svg", "image");
+centerLogo.setAttribute("href", "logo.png");
+centerLogo.setAttribute("width", CENTER_LOGO_SIZE);
+centerLogo.setAttribute("height", CENTER_LOGO_SIZE);
+centerLogo.setAttribute("x", CENTER.x - CENTER_LOGO_SIZE / 2);
+centerLogo.setAttribute("y", CENTER.y - CENTER_LOGO_SIZE / 2);
+centerLogo.setAttribute("preserveAspectRatio", "xMidYMid meet");
+viewport.appendChild(centerLogo);
 
 // Calculer les positions
 schools.forEach(school => {
