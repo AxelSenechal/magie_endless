@@ -300,5 +300,12 @@ const schools = [
     type: "sublimation",
     parents: ["unknown_5_b"],
     description: "Manipulation directe du temps et de sa progression."
+  },
+  {id: "animancie",
+    name: "Animancie",
+    circle: 6,
+    type: "transcendantale",
+    parents: ["psychophorie", "esoterisme", "cadaveromancie"],
+    description: "Maîtrise complète de la vie et de la mort."
   }
 ];
