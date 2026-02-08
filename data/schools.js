@@ -29,7 +29,7 @@ const schools = [
   },
 
   /* =========================
-     2e CERCLE – SUBLIMATIONS
+     2e CERCLE
      ========================= */
 
   {
@@ -56,11 +56,14 @@ const schools = [
     parents: ["transmutation"],
     description: "Contrôle et modification de la vie végétale."
   },
-
-
-  /* ===============================
-     2e CERCLE – TRANSCENDANTALES
-     =============================== */
+  {
+    id: "creation_transmutation",
+    name: "Création (Transmutation)",
+    circle: 2,
+    type: "sublimation",
+    parents: ["transmutation"],
+    description: "Création directe de matière issue de la magie mère."
+  },
 
   {
     id: "projection",
@@ -88,7 +91,7 @@ const schools = [
   },
 
   /* =========================
-     3e CERCLE – SUBLIMATIONS
+     3e CERCLE
      ========================= */
 
   {
@@ -115,9 +118,33 @@ const schools = [
     parents: ["vegetomancie"],
     description: "Manipulation de la vie organique et de ses processus."
   },
+  {
+    id: "cinemancie",
+    name: "Cinémancie",
+    circle: 3,
+    type: "sublimation",
+    parents: ["enchantement"],
+    description: "Manipulation du mouvement et de l’inertie."
+  },
+  {
+    id: "invocation",
+    name: "Invocation",
+    circle: 3,
+    type: "sublimation",
+    parents: ["projection"],
+    description: "Appel et manifestation temporaire d’entités ou de forces."
+  },
+  {
+    id: "nexomancie",
+    name: "Nexomancie",
+    circle: 3,
+    type: "sublimation",
+    parents: ["psychometrie"],
+    description: "Manipulation des liens reliant lieux, objets et événements."
+  },
 
   /* =========================
-     4e CERCLE – SUBLIMATIONS
+     4e CERCLE
      ========================= */
 
   {
@@ -142,11 +169,35 @@ const schools = [
     circle: 4,
     type: "sublimation",
     parents: ["psychophorie"],
-    description: "Imposition de la volonté et du contrôle mental sur autrui."
+    description: "Imposition directe de la volonté sur d’autres esprits."
+  },
+  {
+    id: "harmonimancie",
+    name: "Harmonimancie",
+    circle: 4,
+    type: "sublimation",
+    parents: ["cinemancie"],
+    description: "Contrôle des résonances, rythmes et vibrations."
+  },
+  {
+    id: "conjuration",
+    name: "Conjuration",
+    circle: 4,
+    type: "sublimation",
+    parents: ["invocation"],
+    description: "Ancrage durable et contrôle renforcé des entités invoquées."
+  },
+  {
+    id: "unknown_4_a",
+    name: "???2",
+    circle: 4,
+    type: "sublimation",
+    parents: ["nexomancie"],
+    description: "Renforcement et alignement forcé des connexions existantes."
   },
 
   /* =========================
-     5e CERCLE – SUBLIMATIONS
+     5e CERCLE
      ========================= */
 
   {
@@ -163,7 +214,7 @@ const schools = [
     circle: 5,
     type: "sublimation",
     parents: ["cadaveromancie"],
-    description: "Transformation instable et profonde des formes de vie."
+    description: "Transformation profonde et instable des formes de vie."
   },
   {
     id: "divination",
@@ -173,9 +224,33 @@ const schools = [
     parents: ["psychodomination"],
     description: "Perception et interprétation des informations cachées."
   },
+  {
+    id: "crystalomancie",
+    name: "Crystalomancie",
+    circle: 5,
+    type: "sublimation",
+    parents: ["harmonimancie"],
+    description: "Structuration parfaite de la matière et de l’énergie."
+  },
+  {
+    id: "unknown_5_a",
+    name: "???",
+    circle: 5,
+    type: "sublimation",
+    parents: ["conjuration"],
+    description: "Manipulation avancée des forces invoquées et de leur origine."
+  },
+  {
+    id: "unknown_5_b",
+    name: "???3",
+    circle: 5,
+    type: "sublimation",
+    parents: ["unknown_4_a"],
+    description: "Altération des événements par manipulation indirecte des liens."
+  },
 
   /* =========================
-     6e CERCLE – SUBLIMATIONS
+     6e CERCLE
      ========================= */
 
   {
@@ -201,5 +276,29 @@ const schools = [
     type: "sublimation",
     parents: ["divination"],
     description: "Suprématie de l’esprit sur la perception et la destinée."
+  },
+  {
+    id: "quanticomancie",
+    name: "Quanticomancie",
+    circle: 6,
+    type: "sublimation",
+    parents: ["crystalomancie"],
+    description: "Manipulation des états fondamentaux de la réalité."
+  },
+  {
+    id: "astromancie",
+    name: "Astromancie",
+    circle: 6,
+    type: "sublimation",
+    parents: ["unknown_5_a"],
+    description: "Maîtrise des influences stellaires et des puissances astrales."
+  },
+  {
+    id: "chronomancie",
+    name: "Chronomancie",
+    circle: 6,
+    type: "sublimation",
+    parents: ["unknown_5_b"],
+    description: "Manipulation directe du temps et de sa progression."
   }
 ];
