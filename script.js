@@ -2,10 +2,20 @@ const svg = document.getElementById("magic-map");
 const viewport = document.getElementById("viewport");
 const infoPanel = document.getElementById("info-panel");
 
+// Image de fond statique (ne bouge pas avec le zoom/pan)
+const backgroundImage = document.createElementNS("http://www.w3.org/2000/svg", "image");
+backgroundImage.setAttribute("href", "logo.png");
+backgroundImage.setAttribute("x", "-400");
+backgroundImage.setAttribute("y", "-400");
+backgroundImage.setAttribute("width", "800");
+backgroundImage.setAttribute("height", "800");
+backgroundImage.setAttribute("preserveAspectRatio", "xMidYMid slice");
+backgroundImage.setAttribute("opacity", "0.3");
+svg.insertBefore(backgroundImage, viewport);
+
 const CENTER = { x: 0, y: 0 };
 const RADIUS_STEP = 120;
 const NODE_RADIUS = 22;
-const CENTER_LOGO_SIZE = 160;
 
 const schoolMap = {};
 schools.forEach(s => schoolMap[s.id] = s);
@@ -29,16 +39,6 @@ Object.keys(circles).forEach(circle => {
   c.setAttribute("stroke-dasharray", "4 4");
   viewport.appendChild(c);
 });
-
-// Logo central
-const centerLogo = document.createElementNS("http://www.w3.org/2000/svg", "image");
-centerLogo.setAttribute("href", "logo.png");
-centerLogo.setAttribute("width", CENTER_LOGO_SIZE);
-centerLogo.setAttribute("height", CENTER_LOGO_SIZE);
-centerLogo.setAttribute("x", CENTER.x - CENTER_LOGO_SIZE / 2);
-centerLogo.setAttribute("y", CENTER.y - CENTER_LOGO_SIZE / 2);
-centerLogo.setAttribute("preserveAspectRatio", "xMidYMid meet");
-viewport.appendChild(centerLogo);
 
 // Calculer les positions
 schools.forEach(school => {
