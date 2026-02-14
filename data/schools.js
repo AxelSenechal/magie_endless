@@ -251,7 +251,7 @@ const schools = [
     {
     id: "necromancie",
     name: "Nécromancie",
-    circle: 4,
+    circle: 5,
     type: "transcendantale",
     parents: ["cadaveromancie", "vitamencie"],
     description: "Manipulation de l'energie nécrotique émise par les morts. Permet d'infliger de la nécrose, animer des cadavres, ou pouvoir atteindre les créatures de l'au delà."
@@ -313,7 +313,7 @@ const schools = [
     {
     id: "animancie",
     name: "Animancie",
-    circle: 4,
+    circle: 6,
     type: "sublimation",
     parents: ["necromancie"],
     description: "Manipulation de l'âme, permettant de l'altérer, de la renforcer, et de la modeler pour en faire une source de puissance naturelle pour des choses qui en sont dépourvues."
