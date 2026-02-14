@@ -9,7 +9,7 @@ const schools = [
     circle: 1,
     type: "primordiale",
     parents: [],
-    description: "Manipulation de la forme, de la structure et de l’état des éléments non vivants."
+    description: "Manipulation de la forme, de la structure et de l’état des éléments inertes (matière physique ; solide/liquide/gazeuse)."
   },
   {
     id: "esoterisme",
@@ -17,7 +17,7 @@ const schools = [
     circle: 1,
     type: "primordiale",
     parents: [],
-    description: "Manipulation directe du mana et de ses flux."
+    description: "Manipulation du mana et de ses flux."
   },
   {
     id: "psychomancie",
@@ -25,7 +25,7 @@ const schools = [
     circle: 1,
     type: "primordiale",
     parents: [],
-    description: "Manipulation de l’esprit et de la pensée."
+    description: "Manipulation de la matière psychique."
   },
 
   /* =========================
@@ -57,14 +57,13 @@ const schools = [
     description: "Contrôle et modification de la vie végétale."
   },
 
-
   {
     id: "projection",
     name: "Projection",
     circle: 2,
     type: "transcendantale",
     parents: ["psychomancie", "esoterisme"],
-    description: "Implémentation de la psyché dans le mana pour agir à distance."
+    description: "Implémentation de la psyché dans le mana pour le contrôler à distance."
   },
   {
     id: "enchantement",
@@ -72,7 +71,7 @@ const schools = [
     circle: 2,
     type: "transcendantale",
     parents: ["transmutation", "esoterisme"],
-    description: "Implantation de comportements arcaniques dans la matière."
+    description: "Implantation de comportements manasciens dans la matière. Peut être utilisé sur les matières autres qu’inerte avec l’aide des écoles filles de Transmutation"
   },
   {
     id: "psychometrie",
@@ -101,7 +100,7 @@ const schools = [
     circle: 3,
     type: "sublimation",
     parents: ["evocation"],
-    description: "Maîtrise du feu comme manifestation stable du mana."
+    description: "Altération du mana sous forme de chaleur et flammes."
   },
   {
     id: "vivimancie",
@@ -133,7 +132,7 @@ const schools = [
     circle: 3,
     type: "sublimation",
     parents: ["psychometrie"],
-    description: "Manipulation des liens reliant lieux, objets et événements."
+    description: "Création et manipulation de liens reliant la matière et la matière psychique."
   },
 
   /* =========================
@@ -146,7 +145,7 @@ const schools = [
     circle: 4,
     type: "sublimation",
     parents: ["pyromancie"],
-    description: "Contrôle des décharges électriques et de l’énergie fulgurante."
+    description: "Altération du mana sous forme d’électricité."
   },
   {
     id: "cadaveromancie",
@@ -162,7 +161,7 @@ const schools = [
     circle: 4,
     type: "sublimation",
     parents: ["psychophorie"],
-    description: "Imposition directe de la volonté sur d’autres esprits."
+    description: "Imposition directe de la volonté sur d’autres esprits. Altération de leur fonctions et logiques internes."
   },
   {
     id: "harmonimancie",
@@ -170,7 +169,7 @@ const schools = [
     circle: 4,
     type: "sublimation",
     parents: ["cinemancie"],
-    description: "Contrôle des résonances, rythmes et vibrations."
+    description: "Contrôle des résonances manascienne. Permet de donner des comportements réactifs au mana à de la matière ou du mana."
   },
   {
     id: "conjuration",
@@ -178,7 +177,7 @@ const schools = [
     circle: 4,
     type: "sublimation",
     parents: ["invocation"],
-    description: "Ancrage durable et contrôle renforcé des entités invoquées."
+    description: "Appel et assimilation de force extérieur en mana « soi »."
   },
   {
     id: "unknown_4_a",
@@ -186,16 +185,9 @@ const schools = [
     circle: 4,
     type: "sublimation",
     parents: ["nexomancie"],
-    description: "Renforcement et alignement forcé des connexions existantes."
+    description: "XXX"
   },
-{
-    id: "vitamancie",
-    name: "Vitamancie",
-    circle: 4,
-    type: "transcendantale",
-    parents: ["vivimancie", "esoterisme"],
-    description: "Manipulation directe de l’essence vitale pour guérir ou renforcer la vie."
-  },
+
   /* =========================
      5e CERCLE
      ========================= */
@@ -206,7 +198,7 @@ const schools = [
     circle: 5,
     type: "sublimation",
     parents: ["fulguromancie"],
-    description: "Manipulation de la lumière et des radiations énergétiques."
+    description: "Altération du mana sous forme d’ondes lumineuses."
   },
   {
     id: "alteromancie",
@@ -214,7 +206,7 @@ const schools = [
     circle: 5,
     type: "sublimation",
     parents: ["cadaveromancie"],
-    description: "Transformation profonde et instable des formes de vie."
+    description: "Permet d’altérer la matière d’un règne à l’autre (changer de la vie en pierre, des plante en gaz, etc)."
   },
   {
     id: "divination",
@@ -222,7 +214,7 @@ const schools = [
     circle: 5,
     type: "sublimation",
     parents: ["psychodomination"],
-    description: "Perception et interprétation des informations cachées."
+    description: "Perception de l’esprit du monde, permettant de prédire le -hasard-, et mieux comprendre la constitution du monde."
   },
   {
     id: "crystalomancie",
@@ -230,7 +222,7 @@ const schools = [
     circle: 5,
     type: "sublimation",
     parents: ["harmonimancie"],
-    description: "Structuration parfaite de la matière et de l’énergie."
+    description: "Permet de rendre manifestement physique, sous forme de matière inerte, des concepts abstraits (comme les émotions, les énergies, le temps, etc)."
   },
   {
     id: "unknown_5_a",
@@ -238,7 +230,7 @@ const schools = [
     circle: 5,
     type: "sublimation",
     parents: ["conjuration"],
-    description: "Manipulation avancée des forces invoquées et de leur origine."
+    description: "xxx."
   },
   {
     id: "unknown_5_b",
@@ -246,16 +238,8 @@ const schools = [
     circle: 5,
     type: "sublimation",
     parents: ["unknown_4_a"],
-    description: "Altération des événements par manipulation indirecte des liens."
+    description: "xxx"
   },
-  {id: "necromancie",
-    name: "Nécromancie",
-    circle: 5,
-    type: "transcendantale",
-    parents: ["cadaveromancie", "vitamancie"],
-    description: "Manipulation de l'énergie de la mort et de l’au-delà."
-  },
-  
 
   /* =========================
      6e CERCLE
@@ -267,7 +251,7 @@ const schools = [
     circle: 6,
     type: "sublimation",
     parents: ["luminomancie"],
-    description: "Manipulation des forces fondamentales contenues dans la matière."
+    description: "Altération du mana sous forme de radiations diverses et autre phénomènes atomiques."
   },
   {
     id: "apotheomancie",
@@ -275,7 +259,7 @@ const schools = [
     circle: 6,
     type: "sublimation",
     parents: ["alteromancie"],
-    description: "Altération et élévation ultime de l’essence vitale."
+    description: "Altération de la matière pour transcender les règnes, donnant à celle ci des propriétés normalement impossible (permettre à de l’acier de se régénérer par photosynthèse, à des plantes de fondre sans mourir, à des cadavres de pouvoir assimiler des nutriments, etc)."
   },
   {
     id: "emperomancie",
@@ -283,7 +267,7 @@ const schools = [
     circle: 6,
     type: "sublimation",
     parents: ["divination"],
-    description: "Suprématie de l’esprit sur la perception et la destinée."
+    description: "Altération de la matière psychique du monde même, permettant de donner des ordres à tout comme s’il était du *soi*."
   },
   {
     id: "quanticomancie",
@@ -299,7 +283,7 @@ const schools = [
     circle: 6,
     type: "sublimation",
     parents: ["unknown_5_a"],
-    description: "Maîtrise des influences stellaires et des puissances astrales."
+    description: "Maîtrise de la notion d’espace. Permet de le plier, se téléporter, ou user d’ubiquité par exemple."
   },
   {
     id: "chronomancie",
@@ -307,13 +291,6 @@ const schools = [
     circle: 6,
     type: "sublimation",
     parents: ["unknown_5_b"],
-    description: "Manipulation directe du temps et de sa progression."
-  },
-    {id: "animancie",
-    name: "Animancie",
-    circle: 6,
-    type: "sublimation",
-    parents: ["necromancie"],
-    description: "Maîtrise de l'âme."
+    description: "Manipulation du temps propre de la matière (la remettre dans un état passé, la projeter dès lors dans un état d’un futur hypothétique, verrouiller dans un présent perpétuel/stopper le temps propre.) "
   }
 ];
