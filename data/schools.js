@@ -188,7 +188,7 @@ const schools = [
     description: "XXX"
   },
   {
-    id: "Vitamencie",
+    id: "vitamencie",
     name: "Vitamencie",
     circle: 4,
     type: "transcendantale",
