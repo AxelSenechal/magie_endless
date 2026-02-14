@@ -158,7 +158,6 @@ schools.forEach(school => {
 
 function showInfo(school) {
   infoPanel.innerHTML = `
-    <h1>DESCRIPTION NON VALIDE - EXEMPLE REMPLISSAGE AUTO</h1>
     <h2>${school.name}</h2>
     <p><strong>Cercle :</strong> ${school.circle}</p>
     <p><strong>Type :</strong> ${school.type}</p>
