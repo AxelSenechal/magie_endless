@@ -187,6 +187,14 @@ const schools = [
     parents: ["nexomancie"],
     description: "XXX"
   },
+  {
+    id: "Vitamencie",
+    name: "Vitamencie",
+    circle: 4,
+    type: "transcendantale",
+    parents: ["vivimancie", "esoterisme"],
+    description: "Manipulation de la force vitale des êtres vivants, permettant de régénérer, de renforcer, ou de transmettre celle ci par exemple."
+  },
 
   /* =========================
      5e CERCLE
@@ -240,6 +248,15 @@ const schools = [
     parents: ["unknown_4_a"],
     description: "xxx"
   },
+    {
+    id: "necromancie",
+    name: "Nécromancie",
+    circle: 4,
+    type: "sublimation",
+    parents: ["cadaveromancie"],
+    description: "Manipulation de l'energie nécrotique émise par les morts. Permet d'infliger de la nécrose, animer des cadavres, ou pouvoir atteindre les créatures de l'au delà."
+  },
+
 
   /* =========================
      6e CERCLE
@@ -292,5 +309,14 @@ const schools = [
     type: "sublimation",
     parents: ["unknown_5_b"],
     description: "Manipulation du temps propre de la matière (la remettre dans un état passé, la projeter dès lors dans un état d’un futur hypothétique, verrouiller dans un présent perpétuel/stopper le temps propre.) "
-  }
+  },
+    {
+    id: "animancie",
+    name: "Animancie",
+    circle: 4,
+    type: "sublimation",
+    parents: ["nécromancie"],
+    description: "Manipulation de l'âme, permettant de l'altérer, de la renforcer, et de la modeler pour en faire une source de puissance naturelle pour des choses qui en sont dépourvues."
+  },
+
 ];
