@@ -181,7 +181,7 @@ const schools = [
   },
   {
     id: "unknown_4_a",
-    name: "Harmonimancie",
+    name: "Synchromancie",
     circle: 4,
     type: "sublimation",
     parents: ["nexomancie"],
@@ -234,11 +234,11 @@ const schools = [
   },
   {
     id: "unknown_5_a",
-    name: "???",
+    name: "Spatiomancie",
     circle: 5,
     type: "sublimation",
     parents: ["conjuration"],
-    description: "xxx."
+    description: "Maîtrise de la notion d’espace. Permet de le plier, se téléporter, ou user d’ubiquité par exemple."
   },
   {
     id: "unknown_5_b",
@@ -300,7 +300,7 @@ const schools = [
     circle: 6,
     type: "sublimation",
     parents: ["unknown_5_a"],
-    description: "Maîtrise de la notion d’espace. Permet de le plier, se téléporter, ou user d’ubiquité par exemple."
+    description: "Maîtrise de la notion d’espace multi-dimensionnel. Permet de manipuler les dimensions, d’accéder à des dimensions parallèles, ou de faire voyager des choses à travers les dimensions."
   },
   {
     id: "chronomancie",
