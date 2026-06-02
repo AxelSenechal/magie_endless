@@ -181,11 +181,11 @@ const schools = [
   },
   {
     id: "unknown_4_a",
-    name: "???2",
+    name: "Harmonimancie",
     circle: 4,
     type: "sublimation",
     parents: ["nexomancie"],
-    description: "XXX"
+    description: "Maîtrise de la notion de lien. Permet de créer des liens entre des choses vivantes, ou de les briser, ou de les manipuler."
   },
   {
     id: "vitamencie",
