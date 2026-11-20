@@ -1,26 +1,630 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Endless Epicka – Système de Magie</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101321"><meta name="description" content="Atlas des écoles d’Arkana d’Endless : cercles, filiations et mécanismes."><title>Arkana — Atlas des écoles · Endless</title>
+<style>
+:root{color-scheme:dark;--bg:#0b101c;--panel:#111a2b;--line:#29354b;--text:#ecf0f7;--muted:#a8b6ca;--gold:#e6c78c;--accent:#99c5ff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0,#26304b 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.6 system-ui,sans-serif}a{color:var(--accent)}button,input,select{font:inherit}button{cursor:pointer;color:inherit}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}header{max-width:1600px;margin:auto;padding:35px clamp(18px,4vw,64px) 26px;display:flex;justify-content:space-between;align-items:center;gap:30px}.eyebrow{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}h1,h2,h3,p{margin:0}h1{font:600 clamp(2.6rem,6vw,4.7rem)/1.05 Georgia,serif;letter-spacing:-.04em;margin:9px 0 12px}h1 span{color:var(--gold)}header p{max-width:690px;color:var(--muted)}.seal{width:124px;height:124px;flex:none;border:1px solid #b29768;border-radius:50%;display:grid;place-items:center;color:var(--gold);background:repeating-radial-gradient(circle,transparent 0 12px,#e6c78c17 13px 14px,transparent 15px 20px)}.seal span{font-size:3.4rem;line-height:1;transform:rotate(45deg)}nav{position:sticky;top:0;z-index:10;background:#0b101cee;backdrop-filter:blur(12px);border-block:1px solid var(--line);padding:10px clamp(15px,4vw,64px);display:flex;align-items:center;gap:8px;flex-wrap:wrap}nav button,.ctrl,.pill{background:#172337;border:1px solid var(--line);border-radius:9px;padding:8px 14px;color:var(--muted);font-weight:600}nav button[aria-selected=true],.ctrl:hover{background:#d6b77a;color:#141722;border-color:#d6b77a}main{max-width:1600px;margin:auto;padding:26px clamp(14px,3vw,48px) 48px}.stats{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}.badge{display:inline-flex;align-items:center;gap:6px;color:var(--muted);background:#111b2c;border:1px solid var(--line);border-radius:30px;padding:5px 12px;font-size:.86rem}.badge strong{color:var(--gold)}.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:16px}.toolbar input,.toolbar select{min-width:0;border:1px solid #42516b;background:#101929;border-radius:10px;color:var(--text);padding:10px 12px}.toolbar input{flex:1;min-width:180px}.toolbar select{max-width:100%}.workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,365px);gap:16px;align-items:start}.surface{background:#101929;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 25px #0003}.surface-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);flex-wrap:wrap}.surface-head h2{font-size:1.1rem}.legend{font-size:.78rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:12px}.legend span:before{content:"";display:inline-block;width:20px;border-top:2px solid #9fc5ff;vertical-align:middle;margin-right:6px}.legend span:nth-child(2):before{border-color:#dec084;border-top-style:dashed}.legend span:nth-child(3):before{border-color:#738198;border-top-style:dotted}.map-scroll{overflow:auto;max-height:75vh;scrollbar-color:#566580 #101929}.graph{position:relative;width:1220px;height:640px;background:radial-gradient(circle at 50% 0,#21315066,transparent 65%);isolation:isolate}.graph svg{position:absolute;inset:0;pointer-events:none}.graph-node{position:absolute;width:151px;height:58px;text-align:left;display:flex;align-items:center;gap:8px;border-radius:11px;padding:8px 10px;background:#162238;border:1px solid color-mix(in srgb,var(--branch) 65%,#29354b);box-shadow:0 3px 15px #0005;font-size:13.2px;line-height:1.18;font-weight:650;transition:opacity .15s,background .15s}.graph-node:before{content:"✦";color:var(--branch);font-size:17px}.graph-node:hover,.graph-node.selected{background:#26364e;outline:2px solid var(--branch)}.graph-node.historical{border-style:dashed}.graph-node.dim{opacity:.18}.graph-node.related{opacity:1}.lane-label{position:absolute;width:151px;text-align:center;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--branch);font-weight:700;line-height:1.3}.circle-label{position:absolute;left:10px;font-size:12px;font-weight:700;color:#a7b5c9;letter-spacing:.05em}.detail{padding:22px;position:sticky;top:76px;max-height:calc(100vh - 92px);overflow:auto}.detail h2{font:600 2rem/1.15 Georgia,serif;margin:12px 0 10px;color:var(--gold);overflow-wrap:anywhere}.detail h3{font-size:.92rem;margin:20px 0 6px;color:#b9c6db;text-transform:uppercase;letter-spacing:.06em}.detail p{font-size:.95rem;color:#e1e7f1}.detail .intro{font-size:1.05rem}.detail .tags{display:flex;flex-wrap:wrap;gap:6px}.relation{display:block;width:100%;text-align:left;border:1px solid #354761;background:#18263b;padding:8px 11px;border-radius:8px;margin:6px 0}.relation:hover{border-color:var(--gold)}.empty{padding:22px;color:var(--muted)}.directory{padding:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}.card{color:var(--text);background:#182638;text-align:left;border:1px solid #394b63;border-left:4px solid var(--branch);border-radius:10px;padding:13px;display:flex;flex-direction:column;gap:4px}.card strong{font-size:1.05rem}.card small{color:var(--muted)}.card:hover,.card.selected{border-color:var(--gold);background:#21334b}.overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:15px}.overview article{padding:22px;border:1px solid var(--line);border-radius:14px;background:#111b2c}.overview h2{font:600 1.45rem Georgia,serif;color:var(--gold);margin-bottom:12px}.overview p{color:#d5ddeb}.overview p+p{margin-top:10px}.overview .wide{grid-column:1/-1}.footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding:18px clamp(16px,4vw,64px)}[hidden]{display:none!important}@media(max-width:980px){.workspace{grid-template-columns:minmax(0,1fr)}.detail{position:static;max-height:none;scroll-margin-top:105px}.map-scroll{max-height:65vh}.seal{display:none}}@media(max-width:560px){header{padding-top:22px}nav button{font-size:.86rem;padding:8px 10px}.toolbar select{flex:1}.directory{grid-template-columns:1fr}.detail{padding:18px}.surface-head{padding:12px}.graph-node{font-size:13px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style></head>
+<body><header><div><div class="eyebrow">Endless · Référentiel d’Ilhindhil</div><h1>Atlas de l’<span>Arkana</span></h1><p>Explorez les écoles de magie, leurs filiations et les principes qui régissent leurs Arkanwerk.</p></div><div class="seal" aria-hidden="true"><span>✧</span></div></header>
+<nav aria-label="Navigation"><button id="nav-map" aria-selected="true">Arbre des écoles</button><button id="nav-list" aria-selected="false">Répertoire</button><button id="nav-guide" aria-selected="false">Fondements</button></nav>
+<main><div class="stats"><span class="badge"><strong>36</strong> écoles répertoriées</span><span class="badge"><strong>6</strong> cercles</span><span class="badge"><strong>3</strong> écoles fondamentales</span><span class="badge">Édition · novembre 2026</span></div>
+<section id="atlas"><div class="toolbar"><input id="query" type="search" placeholder="Rechercher une école ou un mécanisme…" aria-label="Rechercher une école"><select id="circle" aria-label="Filtrer par cercle"><option value="">Tous les cercles</option><option value="1">Cercle I</option><option value="2">Cercle II</option><option value="3">Cercle III</option><option value="4">Cercle IV</option><option value="5">Cercle V</option><option value="6">Cercle VI</option></select><select id="kind" aria-label="Filtrer par filiation"><option value="">Toutes les filiations</option><option value="primordiale">Fondamentale</option><option value="sublimation">Sublimation</option><option value="transcendantale">Transcendance</option></select><button class="ctrl" id="reset">Réinitialiser</button></div><div class="workspace"><section class="surface"><div class="surface-head"><h2 id="view-title">Généalogie des Arkana</h2><span id="result" role="status" class="badge"></span><div id="legend" class="legend"><span>Sublimation</span><span>Arkanfusion</span><span>Historique à préciser</span></div></div><div id="map" class="map-scroll" tabindex="0" aria-label="Arbre défilant horizontalement et verticalement"><div class="graph" id="graph"></div></div><div id="directory" class="directory" hidden></div></section><aside class="surface detail" id="detail" aria-label="Fiche de l’école"><div class="eyebrow">Fiche encyclopédique</div><h2>Explorer les écoles</h2><p>Choisissez une école dans l’arbre ou le répertoire pour afficher ses mécanismes, ses exemples, ses limites et ses filiations.</p><h3>Comprendre la structure</h3><p>Les cercles classent les domaines de magie. Les traits continus représentent une Arkanehebung, les traits dorés une Arkanfusion.</p><h3>État des connaissances</h3><p>Les écoles marquées « Historique · à préciser » sont conservées de l’ancienne arborescence sans prétendre que leur description a été entièrement validée dans le référentiel narratif.</p></aside></div></section>
+<section id="guide" class="overview" hidden><article class="wide"><div class="eyebrow">Introduction</div><h2>Une discipline, pas un catalogue d’effets</h2><p>Dans Endless, l’Arkana est une voie de pouvoir distincte. Une école définit le mécanisme employé pour produire un phénomène, pas uniquement son résultat observable. Un miracle, un pouvoir démoniaque ou une technologie fondée sur le mana ne devient pas de la magie parce qu’il ressemble à un Arkanwerk.</p></article><article><h2>Mana et Arkan</h2><p>Le mana est une ressource de pouvoir. L’Arkan en est une forme compatible avec l’Arkana. Le don magique permet à l’Arkanist de convertir son mana en Arkan.</p><p>Les notions de Soi, de Neutre et de Non-soi distinguent l’appartenance des ressources et interviennent dans les possibilités de manipulation.</p></article><article><h2>Trois formes de pratique</h2><p><strong>Incantatoire :</strong> des mots de pouvoir organisent l’Arkanwerk.</p><p><strong>Sceaux :</strong> des symboles assemblés matérialisent sa structure.</p><p><strong>Innée :</strong> le pouvoir s’exprime sans formule ni tracé préalable.</p></article><article><h2>Arkanehebung</h2><p>La sublimation approfondit une école pour former une école nouvelle, dotée d’un mécanisme propre. Par exemple, la Transmutation donne naissance à la Végémancie.</p></article><article><h2>Arkanfusion</h2><p>La transcendance donne naissance à une école à partir de deux domaines. Par exemple, la Transmutation et l’Ésotérisme sont les parents de l’Enchantement.</p></article><article><h2>Composition des Arkanwerk</h2><p>La combinaison de plusieurs mécanismes n’est pas nécessairement une Arkanfusion. Une épée produisant des flammes peut mobiliser Enchantement et Pyromancie sans créer une nouvelle école.</p><p>Il n’existe pas de table universelle de compatibilité : les constructions répondent à la logique de leurs mécanismes.</p></article><article><h2>Durée et permanence</h2><p>Un Arkanwerk ordinaire est généralement temporaire. La concentration peut le maintenir ; un rituel peut stabiliser certains résultats. La durée, la difficulté et le coût dépendent des mécanismes et des circonstances.</p></article><article><h2>Cercles et rangs</h2><p>Les cercles décrivent la généalogie des écoles. Le rang d’un Arkanwerk concerne sa puissance ; le rang d’existence d’un être est une notion distincte. Les hautes écoles n’impliquent pas automatiquement la maîtrise de tous leurs effets.</p></article><article><h2>La révolution d’Ilhindhil</h2><p>La découverte des Eylinds, êtres conscients incarnant des écoles de magie, a rendu possible une révision des anciennes classifications. Leurs évolutions ont éclairé les filiations, tandis que la recherche expérimentale continue de révéler des domaines supérieurs.</p></article><article><h2>Statut du référentiel</h2><p>L’atlas présente les connaissances narratives documentées à ce jour et signale les descriptions historiques à compléter. Les anciennes règles de jeu ne constituent pas automatiquement des lois physiques de l’univers.</p></article></section></main>
+<footer class="footer">Endless · Atlas de l’Arkana — référentiel de lore, distinct des règles chiffrées de jeu.</footer><script>
+// Atlas de l’Arkana — référentiel narratif, novembre 2026.
+// Les descriptions historiques sont conservées séparément des mécanismes documentés.
+const schools = [
+  {
+    "id": "transmutation",
+    "name": "Transmutation",
+    "circle": 1,
+    "type": "primordiale",
+    "parents": [],
+    "description": "Modelage de la matière inerte, de sa forme, de son état physique et de son organisation interne.",
+    "details": [
+      "Modelage de la matière inerte, de sa forme, de son état physique et de son organisation interne.",
+      "Former un mur à partir du sol, modeler un outil ou réorganiser le carbone en diamant. Un mage expérimenté peut imposer un état physique inhabituel.",
+      "N'agit ni sur les tissus biologiques ni sur la nature chimique : le fer ne devient pas de l'or. Le résultat est habituellement temporaire ; un rituel peut le stabiliser."
+    ],
+    "status": "Documentée",
+    "lane": 0
+  },
+  {
+    "id": "esoterisme",
+    "name": "Ésotérisme",
+    "circle": 1,
+    "type": "primordiale",
+    "parents": [],
+    "description": "Manipulation du mana et de l'Arkan, de leurs propriétés et de leurs flux.",
+    "details": [
+      "Manipulation du mana et de l'Arkan, de leurs propriétés et de leurs flux.",
+      "Percevoir les flux, déplacer ou concentrer les ressources arcaniques, analyser ou entraver une circulation de mana.",
+      "Le don magique permet de convertir du mana en Arkan. Toute ressource de pouvoir n'est pas nécessairement de l'Arkan ; les mécanismes et résistances varient."
+    ],
+    "status": "Documentée",
+    "lane": 2
+  },
+  {
+    "id": "psychomancie",
+    "name": "Psychomancie",
+    "circle": 1,
+    "type": "primordiale",
+    "parents": [],
+    "description": "Perception et manipulation de la matière psychique : pensées, souvenirs et autres contenus de l'esprit.",
+    "details": [
+      "Perception et manipulation de la matière psychique : pensées, souvenirs et autres contenus de l'esprit.",
+      "Explorer une pensée, accéder à un souvenir, pratiquer une immersion mentale ou reproduire et fixer des contenus psychiques.",
+      "Ne modèle pas directement le contenant qu'est la conscience ; la Psychurgie altère le contenu, la Psychophorie crée des esprits."
+    ],
+    "status": "Documentée",
+    "lane": 4
+  },
+  {
+    "id": "psychurgie",
+    "name": "Psychurgie",
+    "circle": 2,
+    "type": "sublimation",
+    "parents": [
+      "psychomancie"
+    ],
+    "description": "Modelage, découpage, recomposition et altération de la matière psychique.",
+    "details": [
+      "Modelage, découpage, recomposition et altération de la matière psychique.",
+      "Modifier, assembler ou transformer des pensées et des souvenirs ; travailler les protections constituées de matière psychique.",
+      "Agit sur le contenu de la conscience, non directement sur son identité ou son fonctionnement global."
+    ],
+    "status": "Documentée",
+    "lane": 4
+  },
+  {
+    "id": "evocation",
+    "name": "Évocation",
+    "circle": 2,
+    "type": "sublimation",
+    "parents": [
+      "esoterisme"
+    ],
+    "description": "Confère au mana une manifestation tangible sans le transformer en matière ordinaire.",
+    "details": [
+      "Confère au mana une manifestation tangible sans le transformer en matière ordinaire.",
+      "Former un cristal de mana pur, un équipement ou une paroi de mana ; produire des manifestations pseudo-élémentaires.",
+      "Une apparence de flamme ne signifie pas qu'il s'agit de feu réel. Les propriétés thermiques relèvent de la Pyromancie."
+    ],
+    "status": "Documentée",
+    "lane": 2
+  },
+  {
+    "id": "vegetomancie",
+    "name": "Végémancie",
+    "circle": 2,
+    "type": "sublimation",
+    "parents": [
+      "transmutation"
+    ],
+    "description": "Modelage de la matière végétale vivante et de ses processus.",
+    "details": [
+      "Modelage de la matière végétale vivante et de ses processus.",
+      "Favoriser ou inhiber la croissance, déplacer des tissus, accélérer le flétrissement, exploiter des caractéristiques naturelles d'une plante.",
+      "Ne confère pas librement des propriétés étrangères à l'espèce. Une branche dont les tissus sont morts relève de la Cadavéromancie."
+    ],
+    "status": "Documentée",
+    "lane": 0
+  },
+  {
+    "id": "projection",
+    "name": "Projection",
+    "circle": 2,
+    "type": "transcendantale",
+    "parents": [
+      "psychomancie",
+      "esoterisme"
+    ],
+    "description": "Contrôle distant du mana en y implémentant une dimension psychique.",
+    "details": [
+      "Contrôle distant du mana en y implémentant une dimension psychique.",
+      "Maintenir une prise sur du mana éloigné sans devoir conserver un flux continu entre le mage et la matière arcane contrôlée.",
+      "Ne transfère pas automatiquement une force ou une personne par lien sympathique : c'est le domaine de l'Invocation."
+    ],
+    "status": "Documentée",
+    "lane": 3
+  },
+  {
+    "id": "enchantement",
+    "name": "Enchantement",
+    "circle": 2,
+    "type": "transcendantale",
+    "parents": [
+      "transmutation",
+      "esoterisme"
+    ],
+    "description": "Inscrit un comportement arcanique dans la structure d'une matière afin que son mana réalise ce comportement.",
+    "details": [
+      "Inscrit un comportement arcanique dans la structure d'une matière afin que son mana réalise ce comportement.",
+      "Associer l'Enchantement à la Pyromancie pour une épée produisant des flammes, ou à la Vivimancie pour conférer au vivant une capacité magique limitée.",
+      "Un support enchanté n'est pas nécessairement conscient. Conférer un comportement n'équivaut pas à octroyer un véritable potentiel magique."
+    ],
+    "status": "Documentée",
+    "lane": 1
+  },
+  {
+    "id": "psychometrie",
+    "name": "Psychométrie",
+    "circle": 2,
+    "type": "transcendantale",
+    "parents": [
+      "transmutation",
+      "psychomancie"
+    ],
+    "description": "Lecture, inscription et altération des empreintes psychiques associées à la matière.",
+    "details": [
+      "Lecture, inscription et altération des empreintes psychiques associées à la matière.",
+      "Examiner les sentiments imprégnant un tableau, rechercher des traces psychiques lors d'une enquête ou ancrer une empreinte dans un support.",
+      "Les traces révèlent des vécus subjectifs, non un enregistrement exhaustif et objectif du passé. Des rituels peuvent stabiliser les empreintes artificielles."
+    ],
+    "status": "Documentée",
+    "lane": 5
+  },
+  {
+    "id": "psychophorie",
+    "name": "Psychophorie",
+    "circle": 3,
+    "type": "sublimation",
+    "parents": [
+      "psychurgie"
+    ],
+    "description": "Création d'esprits et de pseudo-esprits capables de traiter la matière psychique.",
+    "details": [
+      "Création d'esprits et de pseudo-esprits capables de traiter la matière psychique.",
+      "Construire un pseudo-esprit apte à des raisonnements simples, puis des structures psychiques plus complexes avec davantage de maîtrise.",
+      "Un esprit n'est pas synonyme d'âme. La création d'un contenant psychique se distingue de l'altération d'une pensée."
+    ],
+    "status": "Documentée",
+    "lane": 4
+  },
+  {
+    "id": "pyromancie",
+    "name": "Pyromancie",
+    "circle": 3,
+    "type": "sublimation",
+    "parents": [
+      "evocation"
+    ],
+    "description": "Confère au mana des propriétés thermiques et permet sa combustion en véritables flammes.",
+    "details": [
+      "Confère au mana des propriétés thermiques et permet sa combustion en véritables flammes.",
+      "Réchauffer un objet par contact du mana chaud, produire une chaleur sans flamme visible ou manifester des flammes réelles.",
+      "La chaleur n'apparaît pas directement à distance : le mana transformé doit atteindre ce qu'il chauffe."
+    ],
+    "status": "Documentée",
+    "lane": 2
+  },
+  {
+    "id": "vivimancie",
+    "name": "Vivimancie",
+    "circle": 3,
+    "type": "sublimation",
+    "parents": [
+      "vegetomancie"
+    ],
+    "description": "Modelage de la matière vivante animale et de ses processus biologiques.",
+    "details": [
+      "Modelage de la matière vivante animale et de ses processus biologiques.",
+      "Soigner, réorganiser les tissus ou les fonctions existantes, et créer des organismes dans le cadre des possibilités de l'Arkana.",
+      "Ne permet pas d'attribuer arbitrairement des propriétés étrangères au potentiel biologique ; créer un organisme ne crée pas automatiquement un esprit."
+    ],
+    "status": "Documentée",
+    "lane": 0
+  },
+  {
+    "id": "cinemancie",
+    "name": "Cinémancie",
+    "circle": 3,
+    "type": "sublimation",
+    "parents": [
+      "enchantement"
+    ],
+    "description": "Manipulation de la cinétique : mouvements, vecteurs, énergie cinétique, inertie et vibrations.",
+    "details": [
+      "Manipulation de la cinétique : mouvements, vecteurs, énergie cinétique, inertie et vibrations.",
+      "Modifier le déplacement d'un objet ou ses vibrations ; travailler des phénomènes sonores.",
+      "Ne modifie pas arbitrairement toutes les lois de la réalité ; la précision et la portée dépendent de la maîtrise."
+    ],
+    "status": "Documentée",
+    "lane": 1
+  },
+  {
+    "id": "invocation",
+    "name": "Invocation",
+    "circle": 3,
+    "type": "sublimation",
+    "parents": [
+      "projection"
+    ],
+    "description": "Transfert d'une force, d'un objet, d'un être ou d'un aspect d'existence par lien sympathique.",
+    "details": [
+      "Transfert d'une force, d'un objet, d'un être ou d'un aspect d'existence par lien sympathique.",
+      "Appeler un objet familier, envoyer de l'Arkan à un sceau connu ou transférer temporairement un aspect d'une existence.",
+      "Un aspect invoqué prélève réellement une part de l'original sans changer son rang d'existence. L'appel ne donne pas le contrôle de ce qui est transféré ; l'effet est généralement temporaire."
+    ],
+    "status": "Documentée",
+    "lane": 3
+  },
+  {
+    "id": "nexomancie",
+    "name": "Nexomancie",
+    "circle": 3,
+    "type": "sublimation",
+    "parents": [
+      "psychometrie"
+    ],
+    "description": "Création, perception et exploitation des liens fonctionnels entre esprit et matière.",
+    "details": [
+      "Création, perception et exploitation des liens fonctionnels entre esprit et matière.",
+      "Établir des connexions permettant à une structure psychique de s'articuler à un support matériel.",
+      "Une connexion active n'est pas une simple empreinte psychométrique ; elle ne constitue pas nécessairement un esprit ou une âme."
+    ],
+    "status": "Documentée",
+    "lane": 5
+  },
+  {
+    "id": "fulguromancie",
+    "name": "Fulguromancie",
+    "circle": 4,
+    "type": "sublimation",
+    "parents": [
+      "pyromancie"
+    ],
+    "description": "Donne au mana les propriétés électriques et conductrices.",
+    "details": [
+      "Donne au mana les propriétés électriques et conductrices.",
+      "Manifester un courant ou une décharge ; infléchir les propriétés conductrices du mana avec une maîtrise avancée.",
+      "Les phénomènes électriques réels sont des manifestations du mana du mage. Les règles de conduction peuvent varier selon la maîtrise."
+    ],
+    "status": "Documentée",
+    "lane": 2
+  },
+  {
+    "id": "cadaveromancie",
+    "name": "Cadavéromancie",
+    "circle": 4,
+    "type": "sublimation",
+    "parents": [
+      "vivimancie"
+    ],
+    "description": "Modelage de la matière biologique morte, végétale comme animale.",
+    "details": [
+      "Modelage de la matière biologique morte, végétale comme animale.",
+      "Façonner du bois mort, des os ou des tissus morts ; déplacer une structure de matière morte.",
+      "Ne manipule pas une énergie nécrotique. Animer une structure mécaniquement ne prouve ni autonomie, ni présence d'un esprit ou d'une âme."
+    ],
+    "status": "Documentée",
+    "lane": 0
+  },
+  {
+    "id": "psychodomination",
+    "name": "Psychodomination",
+    "circle": 4,
+    "type": "sublimation",
+    "parents": [
+      "psychophorie"
+    ],
+    "description": "Modelage de la conscience : identité, personnalité, volonté et fonctionnement conscient ou inconscient.",
+    "details": [
+      "Modelage de la conscience : identité, personnalité, volonté et fonctionnement conscient ou inconscient.",
+      "Transformer les processus qui déterminent la manière de penser, de ressentir et de se percevoir.",
+      "Se distingue de la modification ponctuelle d'un souvenir et de la fabrication d'un pseudo-esprit."
+    ],
+    "status": "Documentée",
+    "lane": 4
+  },
+  {
+    "id": "harmonimancie",
+    "name": "Harmonimancie",
+    "circle": 4,
+    "type": "sublimation",
+    "parents": [
+      "cinemancie"
+    ],
+    "description": "Manipulation des relations de résonance physico-énergétique entre matières, mana, Arkan et autres phénomènes.",
+    "details": [
+      "Manipulation des relations de résonance physico-énergétique entre matières, mana, Arkan et autres phénomènes.",
+      "Infléchir la manière dont des éléments existants entrent en relation et réagissent les uns aux autres.",
+      "Ne se réduit pas à l'harmonie sonore ; elle ne crée pas nécessairement de phénomènes à partir de rien."
+    ],
+    "status": "Documentée",
+    "lane": 1
+  },
+  {
+    "id": "conjuration",
+    "name": "Conjuration",
+    "circle": 4,
+    "type": "sublimation",
+    "parents": [
+      "invocation"
+    ],
+    "description": "Appel conceptuel d'un aspect d'une existence, sans soustraire cet aspect à l'original.",
+    "details": [
+      "Appel conceptuel d'un aspect d'une existence, sans soustraire cet aspect à l'original.",
+      "Manifester un aspect d'une source et, selon les capacités du praticien, l'assimiler à sa propre existence.",
+      "À la différence de l'Invocation, la source n'est pas diminuée par un prélèvement réel. L'aspect n'est pas l'original."
+    ],
+    "status": "Documentée",
+    "lane": 3
+  },
+  {
+    "id": "unknown_4_a",
+    "name": "Synchromancie",
+    "circle": 4,
+    "type": "sublimation",
+    "parents": [
+      "nexomancie"
+    ],
+    "description": "Synchronisation de connexions fonctionnelles entre esprit et matière vivante, notamment entre individus.",
+    "details": [
+      "Synchronisation de connexions fonctionnelles entre esprit et matière vivante, notamment entre individus.",
+      "Établir des relations permettant d'articuler des perceptions ou des fonctionnements psychiques et physiques.",
+      "Ne se confond pas avec la Psychométrie, qui travaille sur les empreintes, ni avec la simple domination d'une conscience."
+    ],
+    "status": "Documentée",
+    "lane": 5
+  },
+  {
+    "id": "vitamencie",
+    "name": "Vitamencie",
+    "circle": 4,
+    "type": "transcendantale",
+    "parents": [
+      "vivimancie",
+      "esoterisme"
+    ],
+    "description": "Manipulation de la force vitale des êtres vivants (description historique).",
+    "details": [
+      "Manipulation de la force vitale des êtres vivants (description historique).",
+      "Les anciens référentiels évoquent la régénération, le renforcement et le transfert de force vitale.",
+      "Fiche détaillée à confirmer dans le référentiel littéraire."
+    ],
+    "status": "Historique · à préciser",
+    "lane": 6
+  },
+  {
+    "id": "luminomancie",
+    "name": "Luminomancie",
+    "circle": 5,
+    "type": "sublimation",
+    "parents": [
+      "fulguromancie"
+    ],
+    "description": "Confère au mana les comportements du rayonnement lumineux.",
+    "details": [
+      "Confère au mana les comportements du rayonnement lumineux.",
+      "Produire, propager, réfléchir et concentrer la lumière ; accéder à des rayonnements proches du spectre visible.",
+      "N'englobe pas toutes les formes de rayonnement. Une lumière produite par une prière ne relève pas automatiquement de cette école."
+    ],
+    "status": "Documentée",
+    "lane": 2
+  },
+  {
+    "id": "alteromancie",
+    "name": "Altéromancie",
+    "circle": 5,
+    "type": "sublimation",
+    "parents": [
+      "cadaveromancie"
+    ],
+    "description": "Recomposition de la matière et transformation au-delà des frontières chimiques et biologiques ordinaires.",
+    "details": [
+      "Recomposition de la matière et transformation au-delà des frontières chimiques et biologiques ordinaires.",
+      "Modifier la nature d'une substance ou introduire des propriétés issues d'autres règnes.",
+      "Une combinaison de propriétés n'est pas nécessairement cohérente ou stable ; l'Apothéomancie dépasse cette limite."
+    ],
+    "status": "Documentée",
+    "lane": 0
+  },
+  {
+    "id": "divination",
+    "name": "Divination",
+    "circle": 5,
+    "type": "sublimation",
+    "parents": [
+      "psychodomination"
+    ],
+    "description": "Perception de la trame psychique et de la volonté du monde.",
+    "details": [
+      "Perception de la trame psychique et de la volonté du monde.",
+      "Anticiper les évolutions auxquelles le monde tend et comprendre les circonstances qui s'enchevêtrent.",
+      "Ne lit pas un futur immuable. Elle observe la trame plutôt que de contraindre son évolution."
+    ],
+    "status": "Documentée",
+    "lane": 4
+  },
+  {
+    "id": "crystalomancie",
+    "name": "Cristallomancie",
+    "circle": 5,
+    "type": "sublimation",
+    "parents": [
+      "harmonimancie"
+    ],
+    "description": "Donne une existence matérielle à des énergies ou phénomènes conceptuels.",
+    "details": [
+      "Donne une existence matérielle à des énergies ou phénomènes conceptuels.",
+      "Faire prendre une forme physique à un phénomène tout en conservant certaines de ses propriétés.",
+      "Ne se réduit pas à créer un cristal minéral ordinaire ; le mécanisme porte sur les relations entre matière et phénomène."
+    ],
+    "status": "Documentée",
+    "lane": 1
+  },
+  {
+    "id": "unknown_5_a",
+    "name": "Spatiomancie",
+    "circle": 5,
+    "type": "sublimation",
+    "parents": [
+      "conjuration"
+    ],
+    "description": "Perception et modelage de la trame spatiale d'un monde par connexion sympathique.",
+    "details": [
+      "Perception et modelage de la trame spatiale d'un monde par connexion sympathique.",
+      "Parcourir, dilater, contracter ou déformer l'espace ; modifier les conditions spatiales d'un déplacement.",
+      "Agit sur la trame spatiale d'un monde. L'Astromancie intervient sur la notion même de distance."
+    ],
+    "status": "Documentée",
+    "lane": 3
+  },
+  {
+    "id": "unknown_5_b",
+    "name": "Éidomancie",
+    "circle": 5,
+    "type": "sublimation",
+    "parents": [
+      "unknown_4_a"
+    ],
+    "description": "Actualise les états d'existence d'une cible en rapport avec son identité et la mémoire du monde.",
+    "details": [
+      "Actualise les états d'existence d'une cible en rapport avec son identité et la mémoire du monde.",
+      "Restituer l'état passé d'une épée rouillée, maintenir un état présent ou actualiser un futur plausible.",
+      "Ne fait pas voyager dans le temps. L'intégrité de la cible, la plausibilité de l'état et la stabilisation de l'effet déterminent la difficulté."
+    ],
+    "status": "Documentée",
+    "lane": 5
+  },
+  {
+    "id": "necromancie",
+    "name": "Nécromancie",
+    "circle": 5,
+    "type": "transcendantale",
+    "parents": [
+      "cadaveromancie",
+      "vitamencie"
+    ],
+    "description": "Manipulation de l'énergie nécrotique associée aux morts (description historique).",
+    "details": [
+      "Manipulation de l'énergie nécrotique associée aux morts (description historique).",
+      "L'ancienne arborescence la distingue du simple modelage des cadavres.",
+      "Le retour à la vie n'est pas automatiquement nécromantique : un miracle ou une autre voie de pouvoir peut produire un effet analogue."
+    ],
+    "status": "Historique · à préciser",
+    "lane": 6
+  },
+  {
+    "id": "nucleomancie",
+    "name": "Nucléomancie",
+    "circle": 6,
+    "type": "sublimation",
+    "parents": [
+      "luminomancie"
+    ],
+    "description": "Confère au mana des propriétés permettant de manifester des phénomènes d'énergie nucléaire.",
+    "details": [
+      "Confère au mana des propriétés permettant de manifester des phénomènes d'énergie nucléaire.",
+      "Produire des manifestations énergétiques et des rayonnements au-delà de la lumière.",
+      "La transformation concerne le mana du praticien, non directement les noyaux de la matière ordinaire environnante."
+    ],
+    "status": "Documentée",
+    "lane": 2
+  },
+  {
+    "id": "apotheomancie",
+    "name": "Apothéomancie",
+    "circle": 6,
+    "type": "sublimation",
+    "parents": [
+      "alteromancie"
+    ],
+    "description": "Transcende les frontières entre règnes en produisant des organisations de matière inédites et fonctionnelles.",
+    "details": [
+      "Transcende les frontières entre règnes en produisant des organisations de matière inédites et fonctionnelles.",
+      "Concevoir une matière dotée de propriétés normalement incompatibles, mais désormais intégrées à une structure cohérente.",
+      "Se distingue de l'Altéromancie par la compatibilité intrinsèque et la stabilité des mécanismes réunis."
+    ],
+    "status": "Documentée",
+    "lane": 0
+  },
+  {
+    "id": "emperomancie",
+    "name": "Empéromancie",
+    "circle": 6,
+    "type": "sublimation",
+    "parents": [
+      "divination"
+    ],
+    "description": "Influence la volonté du monde pour orienter les circonstances vers une issue donnée.",
+    "details": [
+      "Influence la volonté du monde pour orienter les circonstances vers une issue donnée.",
+      "Faire converger différents événements possibles vers un résultat souhaité sans imposer nécessairement une décision à un individu.",
+      "Ne réécrit pas arbitrairement les lois du réel ; même une issue très improbable doit rester possible."
+    ],
+    "status": "Documentée",
+    "lane": 4
+  },
+  {
+    "id": "quanticomancie",
+    "name": "Quanticomancie",
+    "circle": 6,
+    "type": "sublimation",
+    "parents": [
+      "crystalomancie"
+    ],
+    "description": "Manipule les interactions fondamentales de la matière et de l'énergie à une échelle extrêmement fine.",
+    "details": [
+      "Manipule les interactions fondamentales de la matière et de l'énergie à une échelle extrêmement fine.",
+      "Intervenir sur les relations profondes entre matière et énergie, considérées comme expressions d'une même réalité.",
+      "Le haut cercle ne signifie pas omnipotence ; les rapports de force et la maîtrise restent déterminants."
+    ],
+    "status": "Documentée",
+    "lane": 1
+  },
+  {
+    "id": "astromancie",
+    "name": "Astromancie",
+    "circle": 6,
+    "type": "sublimation",
+    "parents": [
+      "unknown_5_a"
+    ],
+    "description": "Réécrit les relations de distance et la notion d'espace elle-même.",
+    "details": [
+      "Réécrit les relations de distance et la notion d'espace elle-même.",
+      "Concevoir des distances ou connexions autres que les distances physiques et sympathiques, notamment entre mondes.",
+      "Se distingue de la Spatiomancie, qui modèle l'espace à l'intérieur d'un monde. Les possibilités exactes dépendent de la maîtrise."
+    ],
+    "status": "Documentée",
+    "lane": 3
+  },
+  {
+    "id": "chronomancie",
+    "name": "Chronomancie",
+    "circle": 6,
+    "type": "sublimation",
+    "parents": [
+      "unknown_5_b"
+    ],
+    "description": "Action directe sur le temps réel et son écoulement.",
+    "details": [
+      "Action directe sur le temps réel et son écoulement.",
+      "Observer le passé et des futurs possibles, suspendre sélectivement le temps propre ou déplacer une existence dans le temps.",
+      "Une seule ligne temporelle ; voyager dans le passé implique une présence instable, contrairement à une remontée globale du temps, opération exceptionnellement coûteuse. La suspension ne rend pas intangible."
+    ],
+    "status": "Documentée",
+    "lane": 5
+  },
+  {
+    "id": "animancie",
+    "name": "Animancie",
+    "circle": 6,
+    "type": "sublimation",
+    "parents": [
+      "necromancie"
+    ],
+    "description": "Manipulation de l'âme (description historique).",
+    "details": [
+      "Manipulation de l'âme (description historique).",
+      "L'ancienne documentation évoque son modelage, son renforcement et ses liens avec le corps et l'esprit.",
+      "La création d'une âme n'est pas une procédure générale établie. La filiation et le mécanisme détaillé restent à confirmer."
+    ],
+    "status": "Historique · à préciser",
+    "lane": 6
+  }
+];
 
-<div id="app">
-  <div id="map-container">
-<svg id="magic-map" viewBox="-400 -400 800 800">
-  <g id="viewport"></g>
-</svg>
-  </div>
-
-  <div id="info-panel">
-    <h2>Sélectionne une école</h2>
-    <p>Clique sur une bulle magique ✨</p>
-  </div>
-</div>
-
-<script src="data/schools.js"></script>
-<script src="script.js"></script>
-</body>
-</html>
+</script><script>
+const labels=['Matière','Matière & mana','Énergie','Mana & esprit','Esprit','Esprit & matière','Vie & âme'], colors=['#80d6a7','#d6bc85','#78c0ff','#f0a98e','#b9a0fb','#8fd6d7','#e7a3c1'], roman=['','I','II','III','IV','V','VI'];const byId=Object.fromEntries(schools.map(s=>[s.id,s]));const graph=document.querySelector('#graph'),directory=document.querySelector('#directory'),detail=document.querySelector('#detail');let selected=null,mode='map';const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const typeLabel=s=>({primordiale:'Fondamentale',sublimation:'Arkanehebung',transcendantale:'Arkanfusion'}[s.type]);const pos=s=>({x:65+s.lane*164,y:62+(s.circle-1)*94});const NS='http://www.w3.org/2000/svg';const svg=document.createElementNS(NS,'svg');svg.setAttribute('width','1220');svg.setAttribute('height','640');svg.setAttribute('viewBox','0 0 1220 640');svg.setAttribute('aria-hidden','true');graph.append(svg);for(let c=1;c<=6;c++){const label=document.createElement('span');label.className='circle-label';label.style.top=(82+(c-1)*94)+'px';label.textContent=roman[c];graph.append(label);const line=document.createElementNS(NS,'line');line.setAttribute('x1','50');line.setAttribute('x2','1210');line.setAttribute('y1',52+(c-1)*94);line.setAttribute('y2',52+(c-1)*94);line.setAttribute('stroke','#334159');line.setAttribute('stroke-dasharray','2 8');svg.append(line)}labels.forEach((l,i)=>{const el=document.createElement('span');el.className='lane-label';el.style.cssText='left:'+(65+i*164)+'px;top:16px;--branch:'+colors[i];el.textContent=l;graph.append(el)});const edges=[];schools.forEach(s=>s.parents.forEach(id=>{const p=byId[id];if(!p)return;const a=pos(p),b=pos(s),path=document.createElementNS(NS,'path');path.setAttribute('d','M '+(a.x+75.5)+' '+(a.y+58)+' C '+(a.x+75.5)+' '+(a.y+78)+', '+(b.x+75.5)+' '+(b.y-20)+', '+(b.x+75.5)+' '+b.y);path.setAttribute('fill','none');path.setAttribute('stroke',s.type==='transcendantale'?'#dec084':colors[s.lane]);path.setAttribute('stroke-width','1.8');path.setAttribute('opacity','.65');if(s.status.startsWith('Historique'))path.setAttribute('stroke-dasharray','2 5');else if(s.type==='transcendantale')path.setAttribute('stroke-dasharray','6 4');svg.append(path);edges.push({path,from:id,to:s.id})}));const buttons={};schools.forEach(s=>{const b=document.createElement('button'),p=pos(s);b.className='graph-node'+(s.status.startsWith('Historique')?' historical':'');b.style.cssText='left:'+p.x+'px;top:'+p.y+'px;--branch:'+colors[s.lane];b.textContent=s.name;b.setAttribute('aria-label',s.name+' — cercle '+s.circle);b.addEventListener('click',()=>select(s.id,true));graph.append(b);buttons[s.id]=b});function related(id){const set=new Set([id]);const up=i=>byId[i].parents.forEach(p=>{if(!set.has(p)){set.add(p);up(p)}});up(id);const down=i=>schools.filter(s=>s.parents.includes(i)).forEach(s=>{if(!set.has(s.id)){set.add(s.id);down(s.id)}});down(id);return set}function select(id,scroll){if(!byId[id])return;selected=id;const s=byId[id];const children=schools.filter(n=>n.parents.includes(id));const links=arr=>arr.length?arr.map(n=>'<button class="relation" data-school="'+esc(n.id)+'">'+esc(n.name)+' · C'+n.circle+'</button>').join(''):'<p>Aucune école répertoriée.</p>';detail.innerHTML='<div class="eyebrow">École d’Arkana · '+esc(labels[s.lane])+'</div><h2>'+esc(s.name)+'</h2><div class="tags"><span class="badge">Cercle '+roman[s.circle]+'</span><span class="badge">'+esc(typeLabel(s))+'</span><span class="badge">'+esc(s.status)+'</span></div><h3>Mécanisme</h3><p class="intro">'+esc(s.details[0])+'</p><h3>Applications et exemples</h3><p>'+esc(s.details[1])+'</p><h3>Limites et distinctions</h3><p>'+esc(s.details[2])+'</p><h3>Écoles parentes</h3>'+links(s.parents.map(p=>byId[p]))+'<h3>Écoles dérivées</h3>'+links(children);detail.querySelectorAll('[data-school]').forEach(b=>b.onclick=()=>{const target=byId[b.dataset.school];select(target.id,false);if(mode==='map'){const p=pos(target);document.querySelector('#map').scrollTo({left:Math.max(0,p.x-180),top:Math.max(0,p.y-120),behavior:'smooth'})}});render();if(scroll&&window.innerWidth<=980)detail.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'','#'+id)}function matches(){const q=norm(document.querySelector('#query').value.trim()),c=document.querySelector('#circle').value,k=document.querySelector('#kind').value;return schools.filter(s=>(!c||s.circle===+c)&&(!k||s.type===k)&&(!q||norm([s.name,...s.details].join(' ')).includes(q)))}function render(){const list=matches(),ids=new Set(list.map(s=>s.id)),rel=selected?related(selected):null;document.querySelector('#result').textContent=list.length+' / '+schools.length+' écoles';for(const s of schools){const b=buttons[s.id];b.classList.toggle('dim',!ids.has(s.id)||(rel&&!rel.has(s.id)));b.classList.toggle('selected',s.id===selected);b.setAttribute('aria-pressed',String(s.id===selected))}edges.forEach(e=>e.path.setAttribute('opacity',rel?(rel.has(e.from)&&rel.has(e.to)?'.95':'.12'):(ids.has(e.from)&&ids.has(e.to)?'.65':'.12')));directory.innerHTML=list.length?list.map(s=>'<button class="card '+(s.id===selected?'selected':'')+'" style="--branch:'+colors[s.lane]+'" data-id="'+esc(s.id)+'"><small>Cercle '+roman[s.circle]+' · '+esc(typeLabel(s))+'</small><strong>'+esc(s.name)+'</strong><small>'+esc(s.details[0])+'</small></button>').join(''):'<p class="empty">Aucune école ne correspond à ces filtres.</p>';directory.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>select(b.dataset.id,true))}function tab(m){mode=m;document.querySelector('#atlas').hidden=m==='guide';document.querySelector('#guide').hidden=m!=='guide';document.querySelector('#map').hidden=m!=='map';directory.hidden=m!=='list';document.querySelector('#legend').hidden=m!=='map';document.querySelector('#view-title').textContent=m==='map'?'Généalogie des Arkana':'Répertoire des écoles';['map','list','guide'].forEach(x=>document.querySelector('#nav-'+x).setAttribute('aria-selected',String(m===x)));render()}['map','list','guide'].forEach(x=>document.querySelector('#nav-'+x).onclick=()=>tab(x));document.querySelector('#query').oninput=render;document.querySelector('#circle').onchange=render;document.querySelector('#kind').onchange=render;const defaultDetail=detail.innerHTML;document.querySelector('#reset').onclick=()=>{document.querySelector('#query').value='';document.querySelector('#circle').value='';document.querySelector('#kind').value='';selected=null;detail.innerHTML=defaultDetail;history.replaceState(null,'',location.pathname+location.search);render()};render();if(byId[location.hash.slice(1)])select(location.hash.slice(1),false);
+</script></body></html>
