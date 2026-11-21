@@ -2,7 +2,7 @@
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101321"><meta name="description" content="Atlas des écoles d’Arkana d’Endless : cercles, filiations et mécanismes."><title>Arkana — Atlas des écoles · Endless</title>
 <style>
 :root{color-scheme:dark;--bg:#0b101c;--panel:#111a2b;--line:#29354b;--text:#ecf0f7;--muted:#a8b6ca;--gold:#e6c78c;--accent:#99c5ff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0,#26304b 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.6 system-ui,sans-serif}a{color:var(--accent)}button,input,select{font:inherit}button{cursor:pointer;color:inherit}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}header{max-width:1600px;margin:auto;padding:35px clamp(18px,4vw,64px) 26px;display:flex;justify-content:space-between;align-items:center;gap:30px}.eyebrow{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}h1,h2,h3,p{margin:0}h1{font:600 clamp(2.6rem,6vw,4.7rem)/1.05 Georgia,serif;letter-spacing:-.04em;margin:9px 0 12px}h1 span{color:var(--gold)}header p{max-width:690px;color:var(--muted)}.seal{width:124px;height:124px;flex:none;border:1px solid #b29768;border-radius:50%;display:grid;place-items:center;color:var(--gold);background:repeating-radial-gradient(circle,transparent 0 12px,#e6c78c17 13px 14px,transparent 15px 20px)}.seal span{font-size:3.4rem;line-height:1;transform:rotate(45deg)}nav{position:sticky;top:0;z-index:10;background:#0b101cee;backdrop-filter:blur(12px);border-block:1px solid var(--line);padding:10px clamp(15px,4vw,64px);display:flex;align-items:center;gap:8px;flex-wrap:wrap}nav button,.ctrl,.pill{background:#172337;border:1px solid var(--line);border-radius:9px;padding:8px 14px;color:var(--muted);font-weight:600}nav button[aria-selected=true],.ctrl:hover{background:#d6b77a;color:#141722;border-color:#d6b77a}main{max-width:1600px;margin:auto;padding:26px clamp(14px,3vw,48px) 48px}.stats{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}.badge{display:inline-flex;align-items:center;gap:6px;color:var(--muted);background:#111b2c;border:1px solid var(--line);border-radius:30px;padding:5px 12px;font-size:.86rem}.badge strong{color:var(--gold)}.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:16px}.toolbar input,.toolbar select{min-width:0;border:1px solid #42516b;background:#101929;border-radius:10px;color:var(--text);padding:10px 12px}.toolbar input{flex:1;min-width:180px}.toolbar select{max-width:100%}.workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,365px);gap:16px;align-items:start}.surface{background:#101929;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 25px #0003}.surface-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);flex-wrap:wrap}.surface-head h2{font-size:1.1rem}.legend{font-size:.78rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:12px}.legend span:before{content:"";display:inline-block;width:20px;border-top:2px solid #9fc5ff;vertical-align:middle;margin-right:6px}.legend span:nth-child(2):before{border-color:#dec084;border-top-style:dashed}.legend span:nth-child(3):before{border-color:#738198;border-top-style:dotted}.map-scroll{overflow:auto;max-height:75vh;scrollbar-color:#566580 #101929}.graph{position:relative;width:1220px;height:640px;background:radial-gradient(circle at 50% 0,#21315066,transparent 65%);isolation:isolate}.graph svg{position:absolute;inset:0;pointer-events:none}.graph-node{position:absolute;width:151px;height:58px;text-align:left;display:flex;align-items:center;gap:8px;border-radius:11px;padding:8px 10px;background:#162238;border:1px solid color-mix(in srgb,var(--branch) 65%,#29354b);box-shadow:0 3px 15px #0005;font-size:13.2px;line-height:1.18;font-weight:650;transition:opacity .15s,background .15s}.graph-node:before{content:"✦";color:var(--branch);font-size:17px}.graph-node:hover,.graph-node.selected{background:#26364e;outline:2px solid var(--branch)}.graph-node.historical{border-style:dashed}.graph-node.dim{opacity:.18}.graph-node.related{opacity:1}.lane-label{position:absolute;width:151px;text-align:center;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--branch);font-weight:700;line-height:1.3}.circle-label{position:absolute;left:10px;font-size:12px;font-weight:700;color:#a7b5c9;letter-spacing:.05em}.detail{padding:22px;position:sticky;top:76px;max-height:calc(100vh - 92px);overflow:auto}.detail h2{font:600 2rem/1.15 Georgia,serif;margin:12px 0 10px;color:var(--gold);overflow-wrap:anywhere}.detail h3{font-size:.92rem;margin:20px 0 6px;color:#b9c6db;text-transform:uppercase;letter-spacing:.06em}.detail p{font-size:.95rem;color:#e1e7f1}.detail .intro{font-size:1.05rem}.detail .tags{display:flex;flex-wrap:wrap;gap:6px}.relation{display:block;width:100%;text-align:left;border:1px solid #354761;background:#18263b;padding:8px 11px;border-radius:8px;margin:6px 0}.relation:hover{border-color:var(--gold)}.empty{padding:22px;color:var(--muted)}.directory{padding:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}.card{color:var(--text);background:#182638;text-align:left;border:1px solid #394b63;border-left:4px solid var(--branch);border-radius:10px;padding:13px;display:flex;flex-direction:column;gap:4px}.card strong{font-size:1.05rem}.card small{color:var(--muted)}.card:hover,.card.selected{border-color:var(--gold);background:#21334b}.overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:15px}.overview article{padding:22px;border:1px solid var(--line);border-radius:14px;background:#111b2c}.overview h2{font:600 1.45rem Georgia,serif;color:var(--gold);margin-bottom:12px}.overview p{color:#d5ddeb}.overview p+p{margin-top:10px}.overview .wide{grid-column:1/-1}.footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding:18px clamp(16px,4vw,64px)}[hidden]{display:none!important}@media(max-width:980px){.workspace{grid-template-columns:minmax(0,1fr)}.detail{position:static;max-height:none;scroll-margin-top:105px}.map-scroll{max-height:65vh}.seal{display:none}}@media(max-width:560px){header{padding-top:22px}nav button{font-size:.86rem;padding:8px 10px}.toolbar select{flex:1}.directory{grid-template-columns:1fr}.detail{padding:18px}.surface-head{padding:12px}.graph-node{font-size:13px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-.map-scroll{height:min(75vh,900px);max-height:none;position:relative;overflow:auto;cursor:grab;overscroll-behavior:contain;touch-action:pan-x pan-y}.map-scroll.dragging{cursor:grabbing;user-select:none}.graph{width:1540px;height:1540px;background:radial-gradient(circle,#263b5a55 0%,#131d30 57%,#0c1424 100%);margin:auto;transform-origin:top left}.graph-node{width:152px;height:54px;justify-content:center;text-align:center;border-radius:99px;font-size:14px;padding:5px 10px}.graph-node:before{font-size:14px}.map-controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.map-controls button{padding:5px 11px;font-size:.88rem}.map-controls output{min-width:52px;text-align:center;color:var(--muted);font-size:.85rem}.map-hint{padding:8px 16px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}.graph-center{position:absolute;left:770px;top:770px;transform:translate(-50%,-50%);text-align:center;pointer-events:none;color:var(--gold);font:600 21px Georgia,serif;letter-spacing:.1em}.graph-center span{display:block;font:600 11px system-ui;letter-spacing:.13em;color:var(--muted);margin-top:6px}.map-families{display:flex;gap:7px 16px;flex-wrap:wrap;padding:11px 16px;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}.map-families span:before{content:"✦";margin-right:6px;color:var(--branch)}@media(max-width:980px){.map-scroll{height:65vh;max-height:none}}</style></head>
+.map-scroll{height:min(75vh,900px);max-height:none;position:relative;overflow:auto;cursor:grab;overscroll-behavior:contain;touch-action:pan-x pan-y}.map-scroll.dragging{cursor:grabbing;user-select:none}.graph{width:1540px;height:1540px;background:radial-gradient(circle,#263b5a55 0%,#131d30 57%,#0c1424 100%);margin:auto;transform-origin:top left}.graph-node{width:152px;height:54px;justify-content:center;text-align:center;border-radius:99px;font-size:14px;padding:5px 10px}.graph-node:before{font-size:14px}.map-controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.map-controls button{padding:5px 11px;font-size:.88rem}.map-controls output{min-width:52px;text-align:center;color:var(--muted);font-size:.85rem}.map-hint{padding:8px 16px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}.graph-center{position:absolute;left:770px;top:770px;transform:translate(-50%,-50%);text-align:center;pointer-events:none;color:var(--gold);font:600 21px Georgia,serif;letter-spacing:.1em}.graph-center span{display:block;font:600 11px system-ui;letter-spacing:.13em;color:var(--muted);margin-top:6px}.map-families{display:flex;gap:7px 16px;flex-wrap:wrap;padding:11px 16px;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}.map-families span:before{content:"✦";margin-right:6px;color:var(--branch)}@media(max-width:980px){.map-scroll{height:65vh;max-height:none}}.example-note{color:var(--muted)!important;font-size:.82rem!important;margin-bottom:10px}.example-list{display:grid;gap:9px}.example-card{padding:12px 13px;background:#18263b;border:1px solid #354761;border-left:3px solid var(--gold);border-radius:9px}.example-card strong{color:var(--gold);display:block;font-size:.94rem;margin-bottom:4px}.example-card p{font-size:.9rem}</style></head>
 <body><header><div><div class="eyebrow">Endless · Référentiel d’Ilhindhil</div><h1>Atlas de l’<span>Arkana</span></h1><p>Explorez les écoles de magie, leurs filiations et les principes qui régissent leurs Arkanwerk.</p></div><div class="seal" aria-hidden="true"><span>✧</span></div></header>
 <nav aria-label="Navigation"><button id="nav-map" aria-selected="true">Arbre des écoles</button><button id="nav-list" aria-selected="false">Répertoire</button><button id="nav-guide" aria-selected="false">Fondements</button></nav>
 <main><div class="stats"><span class="badge"><strong>36</strong> écoles répertoriées</span><span class="badge"><strong>6</strong> cercles</span><span class="badge"><strong>3</strong> écoles fondamentales</span><span class="badge">Édition · novembre 2026</span></div>
@@ -25,7 +25,25 @@ const schools = [
       "N'agit ni sur les tissus biologiques ni sur la nature chimique : le fer ne devient pas de l'or. Le résultat est habituellement temporaire ; un rituel peut le stabiliser."
     ],
     "status": "Documentée",
-    "lane": 0
+    "lane": 0,
+    "examples": [
+      [
+        "Le pont de pierre",
+        "Modeler la roche d'un ravin pour former une passerelle temporaire."
+      ],
+      [
+        "L'atelier instantané",
+        "Donner à une masse de métal la forme d'un outil adapté à une tâche."
+      ],
+      [
+        "Glace tempérée",
+        "Maintenir temporairement de l'eau sous forme solide malgré une température ambiante incompatible."
+      ],
+      [
+        "Diamant éphémère",
+        "Réorganiser le carbone du charbon en diamant sans changer sa composition chimique."
+      ]
+    ]
   },
   {
     "id": "esoterisme",
@@ -40,7 +58,25 @@ const schools = [
       "Le don magique permet de convertir du mana en Arkan. Toute ressource de pouvoir n'est pas nécessairement de l'Arkan ; les mécanismes et résistances varient."
     ],
     "status": "Documentée",
-    "lane": 2
+    "lane": 2,
+    "examples": [
+      [
+        "Vision des flux",
+        "Repérer la circulation du mana dans une salle et distinguer les zones où il s'accumule."
+      ],
+      [
+        "Réservoir arcanique",
+        "Concentrer son Arkan dans une zone afin de l'utiliser pour un autre Arkanwerk."
+      ],
+      [
+        "Analyse d'un sceau",
+        "Observer le cheminement du mana dans un sceau actif pour comprendre son fonctionnement."
+      ],
+      [
+        "Barrage de mana",
+        "Entraver temporairement un flux identifié plutôt que neutraliser indistinctement toute magie."
+      ]
+    ]
   },
   {
     "id": "psychomancie",
@@ -55,7 +91,25 @@ const schools = [
       "Ne modèle pas directement le contenant qu'est la conscience ; la Psychurgie altère le contenu, la Psychophorie crée des esprits."
     ],
     "status": "Documentée",
-    "lane": 4
+    "lane": 4,
+    "examples": [
+      [
+        "Écho d'un souvenir",
+        "Percevoir une scène remémorée par un individu."
+      ],
+      [
+        "Dialogue silencieux",
+        "Manipuler une pensée pour établir une communication psychique."
+      ],
+      [
+        "Immersion mentale",
+        "Explorer la matière psychique d'un esprit pour en examiner les contenus."
+      ],
+      [
+        "Copie mémorielle",
+        "Reproduire une pensée ou un souvenir dans un autre ensemble de matière psychique."
+      ]
+    ]
   },
   {
     "id": "psychurgie",
@@ -72,7 +126,25 @@ const schools = [
       "Agit sur le contenu de la conscience, non directement sur son identité ou son fonctionnement global."
     ],
     "status": "Documentée",
-    "lane": 4
+    "lane": 4,
+    "examples": [
+      [
+        "Souvenir fragmenté",
+        "Découper un souvenir complexe en plusieurs fragments distincts."
+      ],
+      [
+        "Remise en ordre",
+        "Réorganiser des fragments psychiques confus en un récit mental cohérent."
+      ],
+      [
+        "Tableau de pensées",
+        "Assembler des pensées déjà existantes en une représentation mentale nouvelle."
+      ],
+      [
+        "Filtre mental",
+        "Modeler une protection faite de matière psychique pour limiter certaines intrusions."
+      ]
+    ]
   },
   {
     "id": "evocation",
@@ -89,7 +161,25 @@ const schools = [
       "Une apparence de flamme ne signifie pas qu'il s'agit de feu réel. Les propriétés thermiques relèvent de la Pyromancie."
     ],
     "status": "Documentée",
-    "lane": 2
+    "lane": 2,
+    "examples": [
+      [
+        "Passerelle de mana",
+        "Créer une surface tangible de mana sur laquelle marcher."
+      ],
+      [
+        "Cristal arcanique",
+        "Solidifier du mana sous la forme d'un cristal utilisable tant que l'Arkanwerk subsiste."
+      ],
+      [
+        "Main d'Arkan",
+        "Former une main tangible de mana pour saisir un objet."
+      ],
+      [
+        "Flamme illusoire en apparence",
+        "Manifester une forme de mana ressemblant à une flamme, sans qu'elle possède nécessairement la chaleur du feu."
+      ]
+    ]
   },
   {
     "id": "vegetomancie",
@@ -106,7 +196,25 @@ const schools = [
       "Ne confère pas librement des propriétés étrangères à l'espèce. Une branche dont les tissus sont morts relève de la Cadavéromancie."
     ],
     "status": "Documentée",
-    "lane": 0
+    "lane": 0,
+    "examples": [
+      [
+        "Jardin accéléré",
+        "Favoriser la croissance de plantes déjà présentes."
+      ],
+      [
+        "Treille vivante",
+        "Orienter les tiges d'une plante grimpante pour former une tonnelle."
+      ],
+      [
+        "Repos végétatif",
+        "Ralentir temporairement la croissance d'une plante fragile."
+      ],
+      [
+        "Floraison dirigée",
+        "Favoriser l'apparition des fleurs d'une espèce disposant naturellement de cette capacité."
+      ]
+    ]
   },
   {
     "id": "projection",
@@ -124,7 +232,25 @@ const schools = [
       "Ne transfère pas automatiquement une force ou une personne par lien sympathique : c'est le domaine de l'Invocation."
     ],
     "status": "Documentée",
-    "lane": 3
+    "lane": 3,
+    "examples": [
+      [
+        "Sceau distant",
+        "Conserver une prise sur le mana d'un sceau déjà accessible, sans flux continu vers lui."
+      ],
+      [
+        "Orbe itinérante",
+        "Guider une réserve de mana éloignée à travers une pièce."
+      ],
+      [
+        "Contrôle déporté",
+        "Maintenir la maîtrise d'une manifestation d'Évocation à distance, en composition avec cette école."
+      ],
+      [
+        "Relais arcanique",
+        "Agir sur plusieurs amas de mana que le mage a préalablement placés ou pris sous son contrôle."
+      ]
+    ]
   },
   {
     "id": "enchantement",
@@ -142,7 +268,25 @@ const schools = [
       "Un support enchanté n'est pas nécessairement conscient. Conférer un comportement n'équivaut pas à octroyer un véritable potentiel magique."
     ],
     "status": "Documentée",
-    "lane": 1
+    "lane": 1,
+    "examples": [
+      [
+        "Lanterne autonome",
+        "Inscrire un comportement lumineux dans un objet en associant l'Enchantement à la Luminomancie."
+      ],
+      [
+        "Épée flamboyante",
+        "Donner à une épée le comportement arcanique permettant de manifester des flammes, avec la Pyromancie."
+      ],
+      [
+        "Compas animé",
+        "Inscrire un mouvement déterminé dans une aiguille en composition avec la Cinémancie."
+      ],
+      [
+        "Don limité",
+        "Inscrire dans un organisme une capacité arcanique spécifique en composition avec la Vivimancie, sans lui conférer nécessairement un don magique complet."
+      ]
+    ]
   },
   {
     "id": "psychometrie",
@@ -160,7 +304,25 @@ const schools = [
       "Les traces révèlent des vécus subjectifs, non un enregistrement exhaustif et objectif du passé. Des rituels peuvent stabiliser les empreintes artificielles."
     ],
     "status": "Documentée",
-    "lane": 5
+    "lane": 5,
+    "examples": [
+      [
+        "Le tableau du peintre",
+        "Lire les émotions et les pensées qui ont imprégné une œuvre durant sa création."
+      ],
+      [
+        "Journal imprégné",
+        "Retrouver certaines traces psychiques laissées par le propriétaire d'un vieux carnet."
+      ],
+      [
+        "Message ancré",
+        "Inscrire une pensée dans un objet pour qu'un Psychométricien puisse la retrouver."
+      ],
+      [
+        "Trace remaniée",
+        "Modifier une empreinte psychique présente sur un support, sans réécrire l'événement réel."
+      ]
+    ]
   },
   {
     "id": "psychophorie",
@@ -177,7 +339,25 @@ const schools = [
       "Un esprit n'est pas synonyme d'âme. La création d'un contenant psychique se distingue de l'altération d'une pensée."
     ],
     "status": "Documentée",
-    "lane": 4
+    "lane": 4,
+    "examples": [
+      [
+        "Assistant de calcul",
+        "Créer un pseudo-esprit capable de traiter une opération intellectuelle simple."
+      ],
+      [
+        "Gardien d'archives",
+        "Concevoir une structure psychique chargée de reconnaître et classer des informations."
+      ],
+      [
+        "Conseiller mental",
+        "Élaborer un esprit auxiliaire capable d'analyser des pensées sous un autre angle."
+      ],
+      [
+        "Conscience auxiliaire",
+        "Composer avec l'Invocation afin d'aider un individu à gérer deux présences simultanées."
+      ]
+    ]
   },
   {
     "id": "pyromancie",
@@ -194,7 +374,25 @@ const schools = [
       "La chaleur n'apparaît pas directement à distance : le mana transformé doit atteindre ce qu'il chauffe."
     ],
     "status": "Documentée",
-    "lane": 2
+    "lane": 2,
+    "examples": [
+      [
+        "Foyer arcanique",
+        "Produire une flamme réelle par combustion du mana du mage."
+      ],
+      [
+        "Chaleur invisible",
+        "Réchauffer une tasse par l'intermédiaire d'un courant de mana chaud qui atteint le récipient."
+      ],
+      [
+        "Four d'artisan",
+        "Apporter une source de chaleur arcanique temporaire à un atelier."
+      ],
+      [
+        "Manteau réconfortant",
+        "Maintenir autour de soi une manifestation thermique modérée."
+      ]
+    ]
   },
   {
     "id": "vivimancie",
@@ -211,7 +409,25 @@ const schools = [
       "Ne permet pas d'attribuer arbitrairement des propriétés étrangères au potentiel biologique ; créer un organisme ne crée pas automatiquement un esprit."
     ],
     "status": "Documentée",
-    "lane": 0
+    "lane": 0,
+    "examples": [
+      [
+        "Soin des tissus",
+        "Favoriser la réparation de tissus vivants dans la logique de leurs fonctions biologiques."
+      ],
+      [
+        "Repos musculaire",
+        "Agir sur une tension musculaire par le modelage de la matière animale vivante."
+      ],
+      [
+        "Réorganisation corporelle",
+        "Modifier l'organisation de structures déjà présentes dans un organisme."
+      ],
+      [
+        "Corps sans esprit",
+        "Concevoir une structure organique vivante sans prétendre lui avoir automatiquement conféré une conscience."
+      ]
+    ]
   },
   {
     "id": "cinemancie",
@@ -228,7 +444,25 @@ const schools = [
       "Ne modifie pas arbitrairement toutes les lois de la réalité ; la précision et la portée dépendent de la maîtrise."
     ],
     "status": "Documentée",
-    "lane": 1
+    "lane": 1,
+    "examples": [
+      [
+        "Chute ralentie",
+        "Infléchir le mouvement d'un objet qui tombe."
+      ],
+      [
+        "Pendule docile",
+        "Modifier la vitesse et le mouvement d'un pendule."
+      ],
+      [
+        "Silence vibratoire",
+        "Atténuer les vibrations qui produisent un bruit."
+      ],
+      [
+        "Mélodie invisible",
+        "Mettre un matériau en vibration pour produire une note."
+      ]
+    ]
   },
   {
     "id": "invocation",
@@ -245,7 +479,25 @@ const schools = [
       "Un aspect invoqué prélève réellement une part de l'original sans changer son rang d'existence. L'appel ne donne pas le contrôle de ce qui est transféré ; l'effet est généralement temporaire."
     ],
     "status": "Documentée",
-    "lane": 3
+    "lane": 3,
+    "examples": [
+      [
+        "Bijou fidèle",
+        "Appeler dans sa main un objet intimement familier par un lien sympathique."
+      ],
+      [
+        "Sceau alimenté",
+        "Envoyer de l'Arkan à un sceau connu sans trajet spatial continu."
+      ],
+      [
+        "Aspect d'une relique",
+        "Appeler temporairement une part d'existence d'une relique sans déplacer l'ensemble de l'original."
+      ],
+      [
+        "Retour d'une force",
+        "Transférer vers un lieu connu une force déjà existante ; son comportement n'est pas automatiquement contrôlé."
+      ]
+    ]
   },
   {
     "id": "nexomancie",
@@ -262,7 +514,25 @@ const schools = [
       "Une connexion active n'est pas une simple empreinte psychométrique ; elle ne constitue pas nécessairement un esprit ou une âme."
     ],
     "status": "Documentée",
-    "lane": 5
+    "lane": 5,
+    "examples": [
+      [
+        "Prise psychique",
+        "Établir un lien fonctionnel entre un esprit et un objet matériel."
+      ],
+      [
+        "Support relié",
+        "Permettre à une structure psychique d'exploiter un support auquel elle est liée."
+      ],
+      [
+        "Lien retrouvé",
+        "Percevoir la connexion fonctionnelle reliant un esprit à une matière."
+      ],
+      [
+        "Articulation d'un automate",
+        "Associer un pseudo-esprit à un mécanisme matériel en composition avec les écoles nécessaires à son fonctionnement."
+      ]
+    ]
   },
   {
     "id": "fulguromancie",
@@ -279,7 +549,25 @@ const schools = [
       "Les phénomènes électriques réels sont des manifestations du mana du mage. Les règles de conduction peuvent varier selon la maîtrise."
     ],
     "status": "Documentée",
-    "lane": 2
+    "lane": 2,
+    "examples": [
+      [
+        "Étincelle arcanique",
+        "Manifester une étincelle issue des propriétés électriques du mana."
+      ],
+      [
+        "Courant de mana",
+        "Faire circuler du mana doté d'un comportement électrique dans un support."
+      ],
+      [
+        "Signal lumineux",
+        "Alimenter temporairement un dispositif fictionnel conçu pour réagir à l'électricité."
+      ],
+      [
+        "Conductivité révisée",
+        "Faire adopter au mana un comportement conducteur différent de son comportement ordinaire."
+      ]
+    ]
   },
   {
     "id": "cadaveromancie",
@@ -296,7 +584,25 @@ const schools = [
       "Ne manipule pas une énergie nécrotique. Animer une structure mécaniquement ne prouve ni autonomie, ni présence d'un esprit ou d'une âme."
     ],
     "status": "Documentée",
-    "lane": 0
+    "lane": 0,
+    "examples": [
+      [
+        "Sculpture d'os",
+        "Modeler une pièce d'os en un objet décoratif."
+      ],
+      [
+        "Bois mort façonné",
+        "Réorganiser le bois d'une branche dont les tissus ne sont plus vivants."
+      ],
+      [
+        "Marionnette osseuse",
+        "Déplacer une structure osseuse par la magie, sans lui attribuer de conscience."
+      ],
+      [
+        "Restauration d'une relique organique",
+        "Façonner les fragments d'une ancienne structure de matière biologique morte."
+      ]
+    ]
   },
   {
     "id": "psychodomination",
@@ -313,7 +619,25 @@ const schools = [
       "Se distingue de la modification ponctuelle d'un souvenir et de la fabrication d'un pseudo-esprit."
     ],
     "status": "Documentée",
-    "lane": 4
+    "lane": 4,
+    "examples": [
+      [
+        "Perspective nouvelle",
+        "Modeler la manière dont une conscience organise ses représentations."
+      ],
+      [
+        "Calme retrouvé",
+        "Modifier les processus psychiques associés à un état émotionnel persistant."
+      ],
+      [
+        "Réorganisation intérieure",
+        "Transformer certaines habitudes de pensée d'un esprit."
+      ],
+      [
+        "Conscience remodelée",
+        "Agir sur la manière dont un esprit se perçoit, au-delà de la simple réécriture d'un souvenir."
+      ]
+    ]
   },
   {
     "id": "harmonimancie",
@@ -330,7 +654,25 @@ const schools = [
       "Ne se réduit pas à l'harmonie sonore ; elle ne crée pas nécessairement de phénomènes à partir de rien."
     ],
     "status": "Documentée",
-    "lane": 1
+    "lane": 1,
+    "examples": [
+      [
+        "Accord de matières",
+        "Infléchir la façon dont un matériau réagit à un phénomène énergétique."
+      ],
+      [
+        "Résonance arcanique",
+        "Modifier la relation entre un support et un flux de mana existant."
+      ],
+      [
+        "Instrument accordé",
+        "Ajuster les interactions vibratoires entre plusieurs éléments d'un instrument."
+      ],
+      [
+        "Interface réactive",
+        "Faire réagir un matériau à une manifestation arcanique existante par modification de leur relation."
+      ]
+    ]
   },
   {
     "id": "conjuration",
@@ -347,7 +689,25 @@ const schools = [
       "À la différence de l'Invocation, la source n'est pas diminuée par un prélèvement réel. L'aspect n'est pas l'original."
     ],
     "status": "Documentée",
-    "lane": 3
+    "lane": 3,
+    "examples": [
+      [
+        "Aspect d'une relique",
+        "Manifester conceptuellement une propriété d'une relique sans l'affaiblir."
+      ],
+      [
+        "Qualité empruntée",
+        "Assimiler temporairement un aspect conceptuel d'une existence familière."
+      ],
+      [
+        "Signature conceptuelle",
+        "Appeler une caractéristique identifiable d'une source sans la déplacer."
+      ],
+      [
+        "Reflet de puissance",
+        "Manifester un aspect de la force d'une existence, distinct de son original et limité par la maîtrise."
+      ]
+    ]
   },
   {
     "id": "unknown_4_a",
@@ -364,7 +724,25 @@ const schools = [
       "Ne se confond pas avec la Psychométrie, qui travaille sur les empreintes, ni avec la simple domination d'une conscience."
     ],
     "status": "Documentée",
-    "lane": 5
+    "lane": 5,
+    "examples": [
+      [
+        "Geste accordé",
+        "Synchroniser des fonctionnements psychiques et corporels entre deux partenaires."
+      ],
+      [
+        "Perception partagée",
+        "Articuler certaines perceptions de deux individus par leurs connexions fonctionnelles."
+      ],
+      [
+        "Coordination de groupe",
+        "Créer une relation permettant à plusieurs participants d'harmoniser leurs gestes."
+      ],
+      [
+        "Lien sensoriel",
+        "Mettre en relation des perceptions et des fonctions corporelles sans transformer automatiquement les identités."
+      ]
+    ]
   },
   {
     "id": "vitamencie",
@@ -382,7 +760,21 @@ const schools = [
       "Fiche détaillée à confirmer dans le référentiel littéraire."
     ],
     "status": "Historique · à préciser",
-    "lane": 6
+    "lane": 6,
+    "examples": [
+      [
+        "Vigueur rendue",
+        "Renforcer momentanément la force vitale d'un être fatigué."
+      ],
+      [
+        "Réserve vitale",
+        "Concentrer une part de force vitale existante."
+      ],
+      [
+        "Transmission vitale",
+        "Transférer de la force vitale entre deux êtres selon les contraintes de l'école."
+      ]
+    ]
   },
   {
     "id": "luminomancie",
@@ -399,7 +791,25 @@ const schools = [
       "N'englobe pas toutes les formes de rayonnement. Une lumière produite par une prière ne relève pas automatiquement de cette école."
     ],
     "status": "Documentée",
-    "lane": 2
+    "lane": 2,
+    "examples": [
+      [
+        "Orbe lumineuse",
+        "Conférer au mana une manifestation lumineuse pour éclairer un lieu."
+      ],
+      [
+        "Prisme arcanique",
+        "Infléchir la propagation de la lumière manifestée par le mana."
+      ],
+      [
+        "Image lumineuse",
+        "Composer des formes visibles par contrôle de la lumière produite."
+      ],
+      [
+        "Lueur hors spectre",
+        "Manifester un rayonnement proche de la lumière visible, perceptible par des moyens appropriés."
+      ]
+    ]
   },
   {
     "id": "alteromancie",
@@ -416,7 +826,25 @@ const schools = [
       "Une combinaison de propriétés n'est pas nécessairement cohérente ou stable ; l'Apothéomancie dépasse cette limite."
     ],
     "status": "Documentée",
-    "lane": 0
+    "lane": 0,
+    "examples": [
+      [
+        "Matière recomposée",
+        "Modifier la nature chimique d'un matériau là où la Transmutation se limite à le réorganiser."
+      ],
+      [
+        "Pierre végétale",
+        "Introduire dans une matière une propriété empruntée à un autre règne."
+      ],
+      [
+        "Matière hybride",
+        "Composer une substance présentant des caractéristiques normalement étrangères à sa nature."
+      ],
+      [
+        "Fusion de propriétés",
+        "Associer des propriétés de règnes distincts sans garantir leur compatibilité durable."
+      ]
+    ]
   },
   {
     "id": "divination",
@@ -433,7 +861,25 @@ const schools = [
       "Ne lit pas un futur immuable. Elle observe la trame plutôt que de contraindre son évolution."
     ],
     "status": "Documentée",
-    "lane": 4
+    "lane": 4,
+    "examples": [
+      [
+        "Présage de voyage",
+        "Lire les tendances d'un événement à venir dans la trame psychique du monde."
+      ],
+      [
+        "Carrefour des possibles",
+        "Examiner les différentes évolutions qu'une situation semble pouvoir connaître."
+      ],
+      [
+        "Trame d'un conflit",
+        "Comprendre les grandes circonstances qui orientent une situation."
+      ],
+      [
+        "Mauvais augure",
+        "Percevoir qu'un événement paraît probable sans affirmer qu'il se produira inévitablement."
+      ]
+    ]
   },
   {
     "id": "crystalomancie",
@@ -450,7 +896,25 @@ const schools = [
       "Ne se réduit pas à créer un cristal minéral ordinaire ; le mécanisme porte sur les relations entre matière et phénomène."
     ],
     "status": "Documentée",
-    "lane": 1
+    "lane": 1,
+    "examples": [
+      [
+        "Cristal de lueur",
+        "Donner une forme tangible à un phénomène lumineux en conservant certaines de ses caractéristiques."
+      ],
+      [
+        "Matière de vibration",
+        "Materialiser un phénomène vibratoire sous une forme physique."
+      ],
+      [
+        "Émotion tangible",
+        "Donner une forme matérielle à un phénomène conceptuel, selon la maîtrise du mage."
+      ],
+      [
+        "Énergie solidifiée",
+        "Rendre physique une énergie existante sans la réduire à un minéral ordinaire."
+      ]
+    ]
   },
   {
     "id": "unknown_5_a",
@@ -467,7 +931,25 @@ const schools = [
       "Agit sur la trame spatiale d'un monde. L'Astromancie intervient sur la notion même de distance."
     ],
     "status": "Documentée",
-    "lane": 3
+    "lane": 3,
+    "examples": [
+      [
+        "Raccourci spatial",
+        "Contracter la distance à parcourir entre deux endroits d'un même monde."
+      ],
+      [
+        "Salle dilatée",
+        "Modifier la trame spatiale d'un lieu pour en augmenter l'espace disponible."
+      ],
+      [
+        "Chemin courbé",
+        "Déformer spatialement un trajet sans changer la matière qu'il traverse."
+      ],
+      [
+        "Passage spatial",
+        "Parcourir la trame d'un monde selon une géométrie inhabituelle."
+      ]
+    ]
   },
   {
     "id": "unknown_5_b",
@@ -484,7 +966,25 @@ const schools = [
       "Ne fait pas voyager dans le temps. L'intégrité de la cible, la plausibilité de l'état et la stabilisation de l'effet déterminent la difficulté."
     ],
     "status": "Documentée",
-    "lane": 5
+    "lane": 5,
+    "examples": [
+      [
+        "Épée retrouvée",
+        "Faire ressurgir l'état antérieur d'une épée rouillée."
+      ],
+      [
+        "Portrait préservé",
+        "Maintenir l'état actuel d'un tableau malgré sa dégradation ordinaire."
+      ],
+      [
+        "Ruine restaurée",
+        "Faire réapparaître un état passé d'une structure, en fonction de son intégrité et des moyens disponibles."
+      ],
+      [
+        "Rouille anticipée",
+        "Actualiser un état futur plausible d'un objet métallique sans avancer réellement dans le temps."
+      ]
+    ]
   },
   {
     "id": "necromancie",
@@ -502,7 +1002,21 @@ const schools = [
       "Le retour à la vie n'est pas automatiquement nécromantique : un miracle ou une autre voie de pouvoir peut produire un effet analogue."
     ],
     "status": "Historique · à préciser",
-    "lane": 6
+    "lane": 6,
+    "examples": [
+      [
+        "Perception nécrotique",
+        "Identifier la présence d'énergie nécrotique associée à une existence morte."
+      ],
+      [
+        "Canalisation nécrotique",
+        "Rassembler une manifestation d'énergie nécrotique, selon les mécanismes historiques de l'école."
+      ],
+      [
+        "Animation nécrotique",
+        "Envisager une animation reposant sur l'énergie nécrotique plutôt que sur le seul modelage cadavéromantique."
+      ]
+    ]
   },
   {
     "id": "nucleomancie",
@@ -519,7 +1033,21 @@ const schools = [
       "La transformation concerne le mana du praticien, non directement les noyaux de la matière ordinaire environnante."
     ],
     "status": "Documentée",
-    "lane": 2
+    "lane": 2,
+    "examples": [
+      [
+        "Lueur singulière",
+        "Manifester au moyen du mana un rayonnement qui dépasse le domaine lumineux."
+      ],
+      [
+        "Étude arcanique",
+        "Observer les propriétés d'une manifestation nucléaire purement magique dans un contexte de recherche fictionnelle."
+      ],
+      [
+        "Manifestation énergétique",
+        "Faire adopter au mana un état énergétique propre à cette école."
+      ]
+    ]
   },
   {
     "id": "apotheomancie",
@@ -536,7 +1064,25 @@ const schools = [
       "Se distingue de l'Altéromancie par la compatibilité intrinsèque et la stabilité des mécanismes réunis."
     ],
     "status": "Documentée",
-    "lane": 0
+    "lane": 0,
+    "examples": [
+      [
+        "Acier photosynthétique",
+        "Concevoir une matière métallique dont la structure intègre de façon fonctionnelle une propriété végétale."
+      ],
+      [
+        "Matière autoréparante",
+        "Créer une composition qui incorpore durablement une propriété de régénération normalement étrangère à son règne."
+      ],
+      [
+        "Plante liquide",
+        "Concevoir une matière végétale capable d'adopter un état normalement incompatible avec sa structure tout en conservant son fonctionnement."
+      ],
+      [
+        "Architecture hybride",
+        "Élaborer une matière nouvelle dont les propriétés de règnes distincts sont intrinsèquement compatibles."
+      ]
+    ]
   },
   {
     "id": "emperomancie",
@@ -553,7 +1099,25 @@ const schools = [
       "Ne réécrit pas arbitrairement les lois du réel ; même une issue très improbable doit rester possible."
     ],
     "status": "Documentée",
-    "lane": 4
+    "lane": 4,
+    "examples": [
+      [
+        "Rendez-vous providentiel",
+        "Orienter des circonstances ordinaires afin que deux individus se rencontrent."
+      ],
+      [
+        "Hasard favorable",
+        "Faire converger plusieurs événements possibles vers une issue souhaitée."
+      ],
+      [
+        "Issue improbable",
+        "Infléchir une suite de coïncidences pour faire advenir un résultat très peu probable mais réalisable."
+      ],
+      [
+        "Événement détourné",
+        "Réorienter les circonstances d'un événement sans modifier directement les décisions de ses participants."
+      ]
+    ]
   },
   {
     "id": "quanticomancie",
@@ -570,7 +1134,21 @@ const schools = [
       "Le haut cercle ne signifie pas omnipotence ; les rapports de force et la maîtrise restent déterminants."
     ],
     "status": "Documentée",
-    "lane": 1
+    "lane": 1,
+    "examples": [
+      [
+        "Matière en transition",
+        "Explorer la transformation d'une manifestation de matière en manifestation énergétique dans la logique fictive de l'Arkana."
+      ],
+      [
+        "Interface fondamentale",
+        "Modifier les relations entre matière et énergie à l'échelle fondamentale."
+      ],
+      [
+        "État inédit",
+        "Étudier un état de réalité accessible par la manipulation de ses interactions fondamentales."
+      ]
+    ]
   },
   {
     "id": "astromancie",
@@ -587,7 +1165,25 @@ const schools = [
       "Se distingue de la Spatiomancie, qui modèle l'espace à l'intérieur d'un monde. Les possibilités exactes dépendent de la maîtrise."
     ],
     "status": "Documentée",
-    "lane": 3
+    "lane": 3,
+    "examples": [
+      [
+        "Lien intermondes",
+        "Concevoir une relation de distance entre deux mondes distincts."
+      ],
+      [
+        "Proximité impossible",
+        "Rapprocher conceptuellement des lieux qui ne partagent pas une distance spatiale ordinaire."
+      ],
+      [
+        "Géométrie nouvelle",
+        "Définir une relation de distance fondée sur un principe autre que l'espace physique."
+      ],
+      [
+        "Passage intermondes",
+        "Envisager un chemin entre des mondes via la réécriture des relations de distance."
+      ]
+    ]
   },
   {
     "id": "chronomancie",
@@ -604,7 +1200,25 @@ const schools = [
       "Une seule ligne temporelle ; voyager dans le passé implique une présence instable, contrairement à une remontée globale du temps, opération exceptionnellement coûteuse. La suspension ne rend pas intangible."
     ],
     "status": "Documentée",
-    "lane": 5
+    "lane": 5,
+    "examples": [
+      [
+        "Fenêtre sur le passé",
+        "Observer directement une scène d'une époque antérieure."
+      ],
+      [
+        "Présent suspendu",
+        "Suspendre le temps propre d'une cible tandis que le monde continue à évoluer."
+      ],
+      [
+        "Voyage futur",
+        "Déplacer véritablement une existence dans une époque ultérieure."
+      ],
+      [
+        "Retour global",
+        "Faire revenir le monde entier à un état temporel précédent, opération d'une difficulté exceptionnelle."
+      ]
+    ]
   },
   {
     "id": "animancie",
@@ -621,10 +1235,24 @@ const schools = [
       "La création d'une âme n'est pas une procédure générale établie. La filiation et le mécanisme détaillé restent à confirmer."
     ],
     "status": "Historique · à préciser",
-    "lane": 6
+    "lane": 6,
+    "examples": [
+      [
+        "Âme perçue",
+        "Examiner la structure d'une âme dans le cadre des connaissances historiques de l'école."
+      ],
+      [
+        "Renforcement de l'âme",
+        "Modeler ou renforcer une âme existante."
+      ],
+      [
+        "Lien corps-esprit",
+        "Étudier par l'Animancie les liens de l'âme avec le corps et l'esprit en composition avec les mécanismes nécessaires."
+      ]
+    ]
   }
 ];
 
 </script><script>
-const labels=['Matière','Matière & mana','Énergie','Mana & esprit','Esprit','Esprit & matière','Vie & âme'], colors=['#80d6a7','#d6bc85','#78c0ff','#f0a98e','#b9a0fb','#8fd6d7','#e7a3c1'], roman=['','I','II','III','IV','V','VI'];const byId=Object.fromEntries(schools.map(s=>[s.id,s]));const graph=document.querySelector('#graph'),directory=document.querySelector('#directory'),detail=document.querySelector('#detail');let selected=null,mode='map';const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const typeLabel=s=>({primordiale:'Fondamentale',sublimation:'Arkanehebung',transcendantale:'Arkanfusion'}[s.type]);const SIZE=1540,CENTER=770,angles=[-90,-30,30,90,150,210,-125],radius=c=>120+(c-1)*112,point=s=>{const a=angles[s.lane]*Math.PI/180,r=radius(s.circle);return {x:CENTER+r*Math.cos(a),y:CENTER+r*Math.sin(a)}};const pos=s=>{const p=point(s);return{x:p.x-76,y:p.y-27}};const NS='http://www.w3.org/2000/svg';const svg=document.createElementNS(NS,'svg');svg.setAttribute('width',SIZE);svg.setAttribute('height',SIZE);svg.setAttribute('viewBox','0 0 '+SIZE+' '+SIZE);svg.setAttribute('aria-hidden','true');graph.append(svg);const make=(name,attrs)=>{const el=document.createElementNS(NS,name);Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v));svg.append(el);return el};for(let c=1;c<=6;c++){const r=radius(c);make('circle',{cx:CENTER,cy:CENTER,r,fill:'none',stroke:'#526581','stroke-width':c===1?2:1,'stroke-dasharray':c===1?'none':'4 7',opacity:'.7'});const a=-58*Math.PI/180,x=CENTER+r*Math.cos(a),y=CENTER+r*Math.sin(a);make('circle',{cx:x,cy:y,r:16,fill:'#172338',stroke:'#526581'});const t=make('text',{x,y:y+5,fill:'#bdcbe0','font-size':'12','font-weight':'bold','text-anchor':'middle'});t.textContent=roman[c]}const center=document.createElement('div');center.className='graph-center';center.innerHTML='ARKANA<span>LES SIX CERCLES</span>';graph.append(center);document.querySelector('#map-families').innerHTML=labels.map((l,i)=>'<span style="--branch:'+colors[i]+'">'+esc(l)+'</span>').join('');const edges=[];schools.forEach(s=>s.parents.forEach(id=>{const p=byId[id];if(!p)return;const a=point(p),b=point(s),path=document.createElementNS(NS,'path');path.setAttribute('d','M '+a.x+' '+a.y+' L '+b.x+' '+b.y);path.setAttribute('fill','none');path.setAttribute('stroke',s.type==='transcendantale'?'#dec084':colors[s.lane]);path.setAttribute('stroke-width','1.8');path.setAttribute('opacity','.65');if(s.status.startsWith('Historique'))path.setAttribute('stroke-dasharray','2 5');else if(s.type==='transcendantale')path.setAttribute('stroke-dasharray','6 4');svg.append(path);edges.push({path,from:id,to:s.id})}));const buttons={};schools.forEach(s=>{const b=document.createElement('button'),p=pos(s);b.className='graph-node'+(s.status.startsWith('Historique')?' historical':'');b.style.cssText='left:'+p.x+'px;top:'+p.y+'px;--branch:'+colors[s.lane];b.textContent=s.name;b.setAttribute('aria-label',s.name+' — cercle '+s.circle);b.addEventListener('click',()=>select(s.id,true));graph.append(b);buttons[s.id]=b});function related(id){const set=new Set([id]);const up=i=>byId[i].parents.forEach(p=>{if(!set.has(p)){set.add(p);up(p)}});up(id);const down=i=>schools.filter(s=>s.parents.includes(i)).forEach(s=>{if(!set.has(s.id)){set.add(s.id);down(s.id)}});down(id);return set}function select(id,scroll){if(!byId[id])return;selected=id;const s=byId[id];const children=schools.filter(n=>n.parents.includes(id));const links=arr=>arr.length?arr.map(n=>'<button class="relation" data-school="'+esc(n.id)+'">'+esc(n.name)+' · C'+n.circle+'</button>').join(''):'<p>Aucune école répertoriée.</p>';detail.innerHTML='<div class="eyebrow">École d’Arkana · '+esc(labels[s.lane])+'</div><h2>'+esc(s.name)+'</h2><div class="tags"><span class="badge">Cercle '+roman[s.circle]+'</span><span class="badge">'+esc(typeLabel(s))+'</span><span class="badge">'+esc(s.status)+'</span></div><h3>Mécanisme</h3><p class="intro">'+esc(s.details[0])+'</p><h3>Applications et exemples</h3><p>'+esc(s.details[1])+'</p><h3>Limites et distinctions</h3><p>'+esc(s.details[2])+'</p><h3>Écoles parentes</h3>'+links(s.parents.map(p=>byId[p]))+'<h3>Écoles dérivées</h3>'+links(children);detail.querySelectorAll('[data-school]').forEach(b=>b.onclick=()=>{const target=byId[b.dataset.school];select(target.id,false);if(mode==='map')centerOn(target)});render();if(scroll&&window.innerWidth<=980)detail.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'','#'+id)}function matches(){const q=norm(document.querySelector('#query').value.trim()),c=document.querySelector('#circle').value,k=document.querySelector('#kind').value;return schools.filter(s=>(!c||s.circle===+c)&&(!k||s.type===k)&&(!q||norm([s.name,...s.details].join(' ')).includes(q)))}function render(){const list=matches(),ids=new Set(list.map(s=>s.id)),rel=selected?related(selected):null;document.querySelector('#result').textContent=list.length+' / '+schools.length+' écoles';for(const s of schools){const b=buttons[s.id];b.classList.toggle('dim',!ids.has(s.id)||(rel&&!rel.has(s.id)));b.classList.toggle('selected',s.id===selected);b.setAttribute('aria-pressed',String(s.id===selected))}edges.forEach(e=>e.path.setAttribute('opacity',rel?(rel.has(e.from)&&rel.has(e.to)?'.95':'.12'):(ids.has(e.from)&&ids.has(e.to)?'.65':'.12')));directory.innerHTML=list.length?list.map(s=>'<button class="card '+(s.id===selected?'selected':'')+'" style="--branch:'+colors[s.lane]+'" data-id="'+esc(s.id)+'"><small>Cercle '+roman[s.circle]+' · '+esc(typeLabel(s))+'</small><strong>'+esc(s.name)+'</strong><small>'+esc(s.details[0])+'</small></button>').join(''):'<p class="empty">Aucune école ne correspond à ces filtres.</p>';directory.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>select(b.dataset.id,true))}function tab(m){mode=m;document.querySelector('#atlas').hidden=m==='guide';document.querySelector('#guide').hidden=m!=='guide';document.querySelector('#map').hidden=m!=='map';directory.hidden=m!=='list';document.querySelector('#legend').hidden=m!=='map';document.querySelector('#map-tools').hidden=m!=='map';document.querySelector('#map-families').hidden=m!=='map';if(m==='map')requestAnimationFrame(()=>{if(!mapInitialized)fitMap()});document.querySelector('#view-title').textContent=m==='map'?'Généalogie des Arkana':'Répertoire des écoles';['map','list','guide'].forEach(x=>document.querySelector('#nav-'+x).setAttribute('aria-selected',String(m===x)));render()}['map','list','guide'].forEach(x=>document.querySelector('#nav-'+x).onclick=()=>tab(x));document.querySelector('#query').oninput=render;document.querySelector('#circle').onchange=render;document.querySelector('#kind').onchange=render;const defaultDetail=detail.innerHTML;document.querySelector('#reset').onclick=()=>{document.querySelector('#query').value='';document.querySelector('#circle').value='';document.querySelector('#kind').value='';selected=null;detail.innerHTML=defaultDetail;history.replaceState(null,'',location.pathname+location.search);render()};const mapEl=document.querySelector('#map');let zoom=1,mapInitialized=false;function setZoom(next,anchorX=mapEl.clientWidth/2,anchorY=mapEl.clientHeight/2){const old=zoom,worldX=(mapEl.scrollLeft+anchorX)/old,worldY=(mapEl.scrollTop+anchorY)/old;zoom=Math.max(.2,Math.min(1.7,next));graph.style.zoom=zoom;document.querySelector('#zoom-value').textContent=Math.round(zoom*100)+'%';mapEl.scrollLeft=worldX*zoom-anchorX;mapEl.scrollTop=worldY*zoom-anchorY}function fitMap(){if(!mapEl.clientWidth)return;setZoom(Math.min(mapEl.clientWidth/SIZE,mapEl.clientHeight/SIZE));mapEl.scrollTo(0,0);mapInitialized=true}function centerOn(s){const p=point(s);mapEl.scrollTo({left:p.x*zoom-mapEl.clientWidth/2,top:p.y*zoom-mapEl.clientHeight/2,behavior:'smooth'})}document.querySelector('#zoom-in').onclick=()=>setZoom(zoom*1.25);document.querySelector('#zoom-out').onclick=()=>setZoom(zoom/1.25);document.querySelector('#zoom-fit').onclick=fitMap;mapEl.addEventListener('wheel',e=>{if(e.ctrlKey||e.metaKey){e.preventDefault();const r=mapEl.getBoundingClientRect();setZoom(zoom*(e.deltaY<0?1.12:.89),e.clientX-r.left,e.clientY-r.top)}},{passive:false});let drag=null;mapEl.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button!==0||e.target.closest('button'))return;drag={x:e.clientX,y:e.clientY,left:mapEl.scrollLeft,top:mapEl.scrollTop};mapEl.setPointerCapture(e.pointerId);mapEl.classList.add('dragging')});mapEl.addEventListener('pointermove',e=>{if(drag){mapEl.scrollLeft=drag.left+drag.x-e.clientX;mapEl.scrollTop=drag.top+drag.y-e.clientY}});function stopDrag(){drag=null;mapEl.classList.remove('dragging')}mapEl.addEventListener('pointerup',stopDrag);mapEl.addEventListener('pointercancel',stopDrag);requestAnimationFrame(fitMap);render();if(byId[location.hash.slice(1)])select(location.hash.slice(1),false);
+const labels=['Matière','Matière & mana','Énergie','Mana & esprit','Esprit','Esprit & matière','Vie & âme'], colors=['#80d6a7','#d6bc85','#78c0ff','#f0a98e','#b9a0fb','#8fd6d7','#e7a3c1'], roman=['','I','II','III','IV','V','VI'];const byId=Object.fromEntries(schools.map(s=>[s.id,s]));const graph=document.querySelector('#graph'),directory=document.querySelector('#directory'),detail=document.querySelector('#detail');let selected=null,mode='map';const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const typeLabel=s=>({primordiale:'Fondamentale',sublimation:'Arkanehebung',transcendantale:'Arkanfusion'}[s.type]);const SIZE=1540,CENTER=770,angles=[-90,-30,30,90,150,210,-125],radius=c=>120+(c-1)*112,point=s=>{const a=angles[s.lane]*Math.PI/180,r=radius(s.circle);return {x:CENTER+r*Math.cos(a),y:CENTER+r*Math.sin(a)}};const pos=s=>{const p=point(s);return{x:p.x-76,y:p.y-27}};const NS='http://www.w3.org/2000/svg';const svg=document.createElementNS(NS,'svg');svg.setAttribute('width',SIZE);svg.setAttribute('height',SIZE);svg.setAttribute('viewBox','0 0 '+SIZE+' '+SIZE);svg.setAttribute('aria-hidden','true');graph.append(svg);const make=(name,attrs)=>{const el=document.createElementNS(NS,name);Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v));svg.append(el);return el};for(let c=1;c<=6;c++){const r=radius(c);make('circle',{cx:CENTER,cy:CENTER,r,fill:'none',stroke:'#526581','stroke-width':c===1?2:1,'stroke-dasharray':c===1?'none':'4 7',opacity:'.7'});const a=-58*Math.PI/180,x=CENTER+r*Math.cos(a),y=CENTER+r*Math.sin(a);make('circle',{cx:x,cy:y,r:16,fill:'#172338',stroke:'#526581'});const t=make('text',{x,y:y+5,fill:'#bdcbe0','font-size':'12','font-weight':'bold','text-anchor':'middle'});t.textContent=roman[c]}const center=document.createElement('div');center.className='graph-center';center.innerHTML='ARKANA<span>LES SIX CERCLES</span>';graph.append(center);document.querySelector('#map-families').innerHTML=labels.map((l,i)=>'<span style="--branch:'+colors[i]+'">'+esc(l)+'</span>').join('');const edges=[];schools.forEach(s=>s.parents.forEach(id=>{const p=byId[id];if(!p)return;const a=point(p),b=point(s),path=document.createElementNS(NS,'path');path.setAttribute('d','M '+a.x+' '+a.y+' L '+b.x+' '+b.y);path.setAttribute('fill','none');path.setAttribute('stroke',s.type==='transcendantale'?'#dec084':colors[s.lane]);path.setAttribute('stroke-width','1.8');path.setAttribute('opacity','.65');if(s.status.startsWith('Historique'))path.setAttribute('stroke-dasharray','2 5');else if(s.type==='transcendantale')path.setAttribute('stroke-dasharray','6 4');svg.append(path);edges.push({path,from:id,to:s.id})}));const buttons={};schools.forEach(s=>{const b=document.createElement('button'),p=pos(s);b.className='graph-node'+(s.status.startsWith('Historique')?' historical':'');b.style.cssText='left:'+p.x+'px;top:'+p.y+'px;--branch:'+colors[s.lane];b.textContent=s.name;b.setAttribute('aria-label',s.name+' — cercle '+s.circle);b.addEventListener('click',()=>select(s.id,true));graph.append(b);buttons[s.id]=b});function related(id){const set=new Set([id]);const up=i=>byId[i].parents.forEach(p=>{if(!set.has(p)){set.add(p);up(p)}});up(id);const down=i=>schools.filter(s=>s.parents.includes(i)).forEach(s=>{if(!set.has(s.id)){set.add(s.id);down(s.id)}});down(id);return set}function select(id,scroll){if(!byId[id])return;selected=id;const s=byId[id];const children=schools.filter(n=>n.parents.includes(id));const links=arr=>arr.length?arr.map(n=>'<button class="relation" data-school="'+esc(n.id)+'">'+esc(n.name)+' · C'+n.circle+'</button>').join(''):'<p>Aucune école répertoriée.</p>';detail.innerHTML='<div class="eyebrow">École d’Arkana · '+esc(labels[s.lane])+'</div><h2>'+esc(s.name)+'</h2><div class="tags"><span class="badge">Cercle '+roman[s.circle]+'</span><span class="badge">'+esc(typeLabel(s))+'</span><span class="badge">'+esc(s.status)+'</span></div><h3>Mécanisme</h3><p class="intro">'+esc(s.details[0])+'</p><h3>Applications et exemples</h3><p>'+esc(s.details[1])+'</p><h3>Exemples d’Arkanwerk</h3>'+ '<p class="example-note">'+(s.status.startsWith('Historique')?'Pistes illustratives tirées du référentiel historique, à confirmer.':'Illustrations des mécanismes de l’école ; les intitulés ne sont pas des noms officiels de sorts.')+'</p><div class="example-list">'+s.examples.map(([name,desc])=>'<article class="example-card"><strong>'+esc(name)+'</strong><p>'+esc(desc)+'</p></article>').join('')+'</div><h3>Limites et distinctions</h3><p>'+esc(s.details[2])+'</p><h3>Écoles parentes</h3>'+links(s.parents.map(p=>byId[p]))+'<h3>Écoles dérivées</h3>'+links(children);detail.querySelectorAll('[data-school]').forEach(b=>b.onclick=()=>{const target=byId[b.dataset.school];select(target.id,false);if(mode==='map')centerOn(target)});render();if(scroll&&window.innerWidth<=980)detail.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'','#'+id)}function matches(){const q=norm(document.querySelector('#query').value.trim()),c=document.querySelector('#circle').value,k=document.querySelector('#kind').value;return schools.filter(s=>(!c||s.circle===+c)&&(!k||s.type===k)&&(!q||norm([s.name,...s.details,...s.examples.flat()].join(' ')).includes(q)))}function render(){const list=matches(),ids=new Set(list.map(s=>s.id)),rel=selected?related(selected):null;document.querySelector('#result').textContent=list.length+' / '+schools.length+' écoles';for(const s of schools){const b=buttons[s.id];b.classList.toggle('dim',!ids.has(s.id)||(rel&&!rel.has(s.id)));b.classList.toggle('selected',s.id===selected);b.setAttribute('aria-pressed',String(s.id===selected))}edges.forEach(e=>e.path.setAttribute('opacity',rel?(rel.has(e.from)&&rel.has(e.to)?'.95':'.12'):(ids.has(e.from)&&ids.has(e.to)?'.65':'.12')));directory.innerHTML=list.length?list.map(s=>'<button class="card '+(s.id===selected?'selected':'')+'" style="--branch:'+colors[s.lane]+'" data-id="'+esc(s.id)+'"><small>Cercle '+roman[s.circle]+' · '+esc(typeLabel(s))+'</small><strong>'+esc(s.name)+'</strong><small>'+esc(s.details[0])+'</small></button>').join(''):'<p class="empty">Aucune école ne correspond à ces filtres.</p>';directory.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>select(b.dataset.id,true))}function tab(m){mode=m;document.querySelector('#atlas').hidden=m==='guide';document.querySelector('#guide').hidden=m!=='guide';document.querySelector('#map').hidden=m!=='map';directory.hidden=m!=='list';document.querySelector('#legend').hidden=m!=='map';document.querySelector('#map-tools').hidden=m!=='map';document.querySelector('#map-families').hidden=m!=='map';if(m==='map')requestAnimationFrame(()=>{if(!mapInitialized)fitMap()});document.querySelector('#view-title').textContent=m==='map'?'Généalogie des Arkana':'Répertoire des écoles';['map','list','guide'].forEach(x=>document.querySelector('#nav-'+x).setAttribute('aria-selected',String(m===x)));render()}['map','list','guide'].forEach(x=>document.querySelector('#nav-'+x).onclick=()=>tab(x));document.querySelector('#query').oninput=render;document.querySelector('#circle').onchange=render;document.querySelector('#kind').onchange=render;const defaultDetail=detail.innerHTML;document.querySelector('#reset').onclick=()=>{document.querySelector('#query').value='';document.querySelector('#circle').value='';document.querySelector('#kind').value='';selected=null;detail.innerHTML=defaultDetail;history.replaceState(null,'',location.pathname+location.search);render()};const mapEl=document.querySelector('#map');let zoom=1,mapInitialized=false;function setZoom(next,anchorX=mapEl.clientWidth/2,anchorY=mapEl.clientHeight/2){const old=zoom,worldX=(mapEl.scrollLeft+anchorX)/old,worldY=(mapEl.scrollTop+anchorY)/old;zoom=Math.max(.2,Math.min(1.7,next));graph.style.zoom=zoom;document.querySelector('#zoom-value').textContent=Math.round(zoom*100)+'%';mapEl.scrollLeft=worldX*zoom-anchorX;mapEl.scrollTop=worldY*zoom-anchorY}function fitMap(){if(!mapEl.clientWidth)return;setZoom(Math.min(mapEl.clientWidth/SIZE,mapEl.clientHeight/SIZE));mapEl.scrollTo(0,0);mapInitialized=true}function centerOn(s){const p=point(s);mapEl.scrollTo({left:p.x*zoom-mapEl.clientWidth/2,top:p.y*zoom-mapEl.clientHeight/2,behavior:'smooth'})}document.querySelector('#zoom-in').onclick=()=>setZoom(zoom*1.25);document.querySelector('#zoom-out').onclick=()=>setZoom(zoom/1.25);document.querySelector('#zoom-fit').onclick=fitMap;mapEl.addEventListener('wheel',e=>{if(e.ctrlKey||e.metaKey){e.preventDefault();const r=mapEl.getBoundingClientRect();setZoom(zoom*(e.deltaY<0?1.12:.89),e.clientX-r.left,e.clientY-r.top)}},{passive:false});let drag=null;mapEl.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button!==0||e.target.closest('button'))return;drag={x:e.clientX,y:e.clientY,left:mapEl.scrollLeft,top:mapEl.scrollTop};mapEl.setPointerCapture(e.pointerId);mapEl.classList.add('dragging')});mapEl.addEventListener('pointermove',e=>{if(drag){mapEl.scrollLeft=drag.left+drag.x-e.clientX;mapEl.scrollTop=drag.top+drag.y-e.clientY}});function stopDrag(){drag=null;mapEl.classList.remove('dragging')}mapEl.addEventListener('pointerup',stopDrag);mapEl.addEventListener('pointercancel',stopDrag);requestAnimationFrame(fitMap);render();if(byId[location.hash.slice(1)])select(location.hash.slice(1),false);
 </script></body></html>
